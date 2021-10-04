@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Entidades.Persona">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Position X="1.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAQAAACEAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAACAEAYAAQAEACEAAAAgABAAAAAAAQAAAAUAIAAAgA=</HashCode>
       <FileName>Persona.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Cliente">
-    <Position X="5.5" Y="4.25" Width="1.5" />
+    <Position X="3.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAQAAAAAAAAAAAAAAAAAIAAAACAiA=</HashCode>
       <FileName>Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Empleado">
-    <Position X="3" Y="4.25" Width="1.5" />
+    <Position X="3.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAEABQAAAECQIAAAAAAAAAAAAAAAAAAQAAAAmA=</HashCode>
       <FileName>Empleado.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Administrador">
-    <Position X="3" Y="6.75" Width="1.5" />
+    <Position X="5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAQAAQAAAAAAACAAAAAAAAAAABAAAAAAAUAA=</HashCode>
       <FileName>Administrador.cs</FileName>
     </TypeIdentifier>
   </Class>

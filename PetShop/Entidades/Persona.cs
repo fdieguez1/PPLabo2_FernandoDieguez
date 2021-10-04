@@ -1,18 +1,31 @@
 ﻿using System;
+using System.Text;
 
 namespace Entidades
 {
     public abstract class Persona
     {
         public static Persona UsuarioLogueado;
+        public static int PrevId;
 
+        int id;
         string nombre;
         string apellido;
         double cuil;
         string usuario;
         string contrasenia;
 
-
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id = value;
+            }
+        }
         public string Nombre
         {
             get
@@ -80,9 +93,15 @@ namespace Entidades
                 return $"{this.Nombre} {this.Apellido}";
             }
         }
+        static Persona()
+        {
+            PrevId = 0;
+        }
 
         public Persona(string nombre, string apellido)
         {
+            this.Id = ++PrevId;
+            PrevId = this.Id;
             this.Nombre = nombre;
             this.Apellido = apellido;
         }
@@ -92,7 +111,12 @@ namespace Entidades
             this.Cuil = cuil;
         }
 
-        public abstract string Mostrar();
+        public virtual string Mostrar() {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Id: {this.Id} Usuario: {this.Usuario}");
+            sb.AppendLine($"Nombre completo: { this.NombreCompleto} Cuil: { this.Cuil.ToString()}");
+            return sb.ToString();
+        }
 
         public static Persona Login(string usuario, string contrasenia)
         {

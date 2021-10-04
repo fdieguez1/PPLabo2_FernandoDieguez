@@ -32,12 +32,8 @@ namespace PetShopForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblUserType = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.pRenderBody = new System.Windows.Forms.Panel();
+            this.pMenu = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -53,70 +49,42 @@ namespace PetShopForms
             // lblUserType
             // 
             this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserType.Location = new System.Drawing.Point(808, 13);
+            this.lblUserType.Location = new System.Drawing.Point(660, 13);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(177, 14);
             this.lblUserType.TabIndex = 1;
             this.lblUserType.Text = "UserType";
             this.lblUserType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tabControl1
+            // pRenderBody
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 216);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(973, 353);
-            this.tabControl1.TabIndex = 3;
+            this.pRenderBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pRenderBody.Location = new System.Drawing.Point(152, 52);
+            this.pRenderBody.Name = "pRenderBody";
+            this.pRenderBody.Size = new System.Drawing.Size(685, 401);
+            this.pRenderBody.TabIndex = 8;
             // 
-            // tabPage1
+            // pMenu
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 23);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(965, 326);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Empleados";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 23);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(965, 326);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Clientes";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 23);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(965, 326);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Ventas";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 23);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(965, 326);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Productos";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.pMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pMenu.AutoSize = true;
+            this.pMenu.Location = new System.Drawing.Point(12, 52);
+            this.pMenu.Name = "pMenu";
+            this.pMenu.Size = new System.Drawing.Size(134, 401);
+            this.pMenu.TabIndex = 9;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(997, 581);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(849, 465);
+            this.Controls.Add(this.pMenu);
+            this.Controls.Add(this.pRenderBody);
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -126,8 +94,8 @@ namespace PetShopForms
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de gestion de PetShop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicio_FormClosing);
             this.Load += new System.EventHandler(this.Inicio_Load);
-            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,11 +105,8 @@ namespace PetShopForms
 
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblUserType;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Panel pRenderBody;
+        private System.Windows.Forms.Panel pMenu;
     }
 }
 

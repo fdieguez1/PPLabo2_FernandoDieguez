@@ -16,39 +16,42 @@ namespace Entidades
             get { return listaClientes; }
             set { listaClientes = value; }
         }
+        public static int CantidadMaximaClientes { get; set; }
         static Empleado()
         {
             ListaClientes = new List<Cliente>();
+            CantidadMaximaClientes = 10;
         }
 
-        
-        public Empleado(string nombre, string apellido, string usuario, string contrasenia, double cuil) : base(nombre, apellido, cuil)
+        double sueldo;
+        public double Sueldo
+        {
+            get { return this.sueldo; }
+            set
+            {
+                this.sueldo = value;
+            }
+        }
+
+
+        public Empleado(string nombre, string apellido, string usuario, string contrasenia, double cuil, double sueldo) : base(nombre, apellido, cuil)
         {
             this.Usuario = usuario;
             this.Contrasenia = contrasenia;
         }
         protected bool AltaCliente()
         {
-            return true;//Terminar
-        }
-        protected void ListarClientes()
-        {
-            if (ListaClientes != null)
-            {
-                foreach (Cliente cliente in ListaClientes)
-                {
-
-                }
-            }
+            return true;//Llamar a la sobrecarga y ver el resultado de la suma
         }
         protected void Vender(Cliente cliente, Producto producto, int cantidad)
         {
+
         }
-       
+
 
         public static bool CrearEmpleadoPrueba()
         {
-            Empleado auxEmpleado = new Empleado("Fernando", "Dieguez", "ferdieguez", "utnfra2021", 20111111112);
+            Empleado auxEmpleado = new Empleado("Fernando", "Dieguez", "ferdieguez", "utnfra2021", 20111111112, 50000);
             bool altaOk = Administrador.ListaEmpleados + auxEmpleado;
             return altaOk;
         }
@@ -63,6 +66,13 @@ namespace Entidades
             bool altaOk = false;
             if (Administrador.CantidadMaximaEmpleados > listaEmpleados.Count)
             {
+                foreach (Empleado empl in listaEmpleados)
+                {
+                    if (empl == empleado)
+                    {
+                        return false;
+                    }
+                }
                 listaEmpleados.Add(empleado);
                 altaOk = true;
             }

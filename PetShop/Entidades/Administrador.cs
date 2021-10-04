@@ -8,7 +8,6 @@ namespace Entidades
 {
     public sealed class Administrador : Empleado
     {
-        
         public static List<Empleado> ListaEmpleados { get; set; }
         public static int CantidadMaximaEmpleados { get; set; }
 
@@ -30,14 +29,14 @@ namespace Entidades
             ListaEmpleados = new List<Empleado>();
             CantidadMaximaEmpleados = 10;
         }
-        public Administrador(string nombre, string apellido, string usuario, string contrasenia, double cuil, bool superAdminPower) : base(nombre, apellido, usuario, contrasenia, cuil)
+        public Administrador(string nombre, string apellido, string usuario, string contrasenia, double cuil, double sueldo, bool superAdminPower, double bono) : base(nombre, apellido, usuario, contrasenia, cuil, sueldo)
         {
             this.SuperAdminPower = superAdminPower;
         }
 
         public static bool CrearAdminPrueba()
         {
-            Empleado auxAdmin = new Administrador("Christian", "Baus", "Admin", "utnfra2021", 20222222223, true);
+            Empleado auxAdmin = new Administrador("Elpe", "Rrito", "Admin", "utnfra2021", 20222222223, 1000000, true, 10000);
             bool altaOk = Administrador.ListaEmpleados + auxAdmin;
             return altaOk;
         }

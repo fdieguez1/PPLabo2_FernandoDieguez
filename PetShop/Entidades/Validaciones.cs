@@ -52,5 +52,11 @@ namespace Entidades
             }
             return esValida;
         }
+        public static bool ValidarDouble(string cadena)
+        {
+            bool esValida = true;
+            esValida = double.TryParse(cadena, out double convertida);
+            return esValida;
+        }
     }
 }
