@@ -50,6 +50,8 @@ namespace PetShopForms.Vistas.Empleado
             // 
             // dgvEmpleados
             // 
+            this.dgvEmpleados.AllowUserToAddRows = false;
+            this.dgvEmpleados.AllowUserToDeleteRows = false;
             this.dgvEmpleados.AllowUserToOrderColumns = true;
             this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmpleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -65,6 +67,7 @@ namespace PetShopForms.Vistas.Empleado
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmpleados.Location = new System.Drawing.Point(0, 75);
+            this.dgvEmpleados.MultiSelect = false;
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.RowTemplate.Height = 25;
             this.dgvEmpleados.Size = new System.Drawing.Size(800, 375);

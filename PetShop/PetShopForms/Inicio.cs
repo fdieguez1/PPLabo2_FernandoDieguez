@@ -14,16 +14,26 @@ namespace PetShopForms
 {
     public partial class Inicio : Form
     {
+        Form login;
+
         Form menu;
+
+        public Form Login
+        {
+            get { return this.login; }
+            set { this.login = value; }
+        }
         public Form Menu
         {
             get { return this.menu; }
             set { this.menu = value; }
         }
 
-        public Inicio()
+
+        public Inicio(Form loginForm)
         {
             InitializeComponent();
+            Login = loginForm;
         }
 
         public static Form AddFormToControl(Control.ControlCollection controlCollection, Form sourceForm)
@@ -63,9 +73,12 @@ namespace PetShopForms
             formToUse.Show();
         }
 
-        private void Inicio_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Persona.UsuarioLogueado = null;
+            this.Login.Show();
+            this.Close();
         }
+       
     }
 }

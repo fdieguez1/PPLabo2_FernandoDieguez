@@ -12,33 +12,19 @@ using System.Windows.Forms;
 
 namespace PetShopForms.Vistas.Empleado
 {
-    public partial class Editar : Form
+    public partial class Delete : Form
     {
         public PersonaData PersonaDataForm;
         public EmpleadoData EmpleadoDataForm;
-        public Entidades.Empleado selectedEmpleado;
-        public Editar(int empleadoId)
+        public Delete()
         {
             InitializeComponent();
-            foreach (Entidades.Empleado emp in Administrador.ListaEmpleados)
-            {
-                if (emp.Id == empleadoId)
-                {
-                    selectedEmpleado = emp;
-                }
-            }
         }
 
-        private void Editar_Load(object sender, EventArgs e)
+        private void Agregar_Load(object sender, EventArgs e)
         {
             EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new Empleado.EmpleadoData());
             PersonaDataForm = (PersonaData)Inicio.AddFormToControl(pFullContainer.Controls, new Persona.PersonaData());
-            EmpleadoDataForm.Sueldo = selectedEmpleado.Sueldo;
-            PersonaDataForm.Nombre = selectedEmpleado.Nombre;
-            PersonaDataForm.Apellido = selectedEmpleado.Apellido;
-            PersonaDataForm.Cuil = selectedEmpleado.Cuil;
-            PersonaDataForm.Usuario= selectedEmpleado.Usuario;
-            PersonaDataForm.Contrasenia= selectedEmpleado.Contrasenia;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

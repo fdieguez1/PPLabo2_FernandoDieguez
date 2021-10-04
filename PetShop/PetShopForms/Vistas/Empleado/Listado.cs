@@ -20,28 +20,44 @@ namespace PetShopForms.Vistas.Empleado
 
         private void Listado_Load(object sender, EventArgs e)
         {
-            List<Entidades.Persona> listadoEmpleados = new List<Entidades.Persona>(Entidades.Empleado.ListaClientes);
-            foreach (Entidades.Persona user in listadoEmpleados)
-            {
-                user.Contrasenia = "-";
-            }
-            dgvEmpleados.DataSource = listadoEmpleados;
+            CargarEmpleados();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form addForm = new Agregar();
-            addForm.ShowDialog();
+            Form form = new Agregar();
+            DialogResult dialogRes = form.ShowDialog();
+            if (dialogRes != DialogResult.None)
+            {
+                CargarEmpleados();
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
+            int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
+            Form form = new Editar(selectedId);
+            DialogResult dialogRes = form.ShowDialog();
+            if (dialogRes != DialogResult.None)
+            {
+                CargarEmpleados();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            Form form = new Delete();
+            DialogResult dialogRes = form.ShowDialog();
+            if (dialogRes != DialogResult.None)
+            {
+                CargarEmpleados();
+            }
+        }
 
+        void CargarEmpleados()
+        {
+            dgvEmpleados.DataSource = Entidades.Administrador.ListaEmpleados.GetRange(0, Entidades.Administrador.ListaEmpleados.Count);
         }
     }
 }

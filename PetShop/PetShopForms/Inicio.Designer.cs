@@ -34,6 +34,7 @@ namespace PetShopForms
             this.lblUserType = new System.Windows.Forms.Label();
             this.pRenderBody = new System.Windows.Forms.Panel();
             this.pMenu = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -49,7 +50,7 @@ namespace PetShopForms
             // lblUserType
             // 
             this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserType.Location = new System.Drawing.Point(660, 13);
+            this.lblUserType.Location = new System.Drawing.Point(630, 20);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(177, 14);
             this.lblUserType.TabIndex = 1;
@@ -72,29 +73,45 @@ namespace PetShopForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pMenu.AutoSize = true;
+            this.pMenu.BackColor = System.Drawing.Color.Transparent;
             this.pMenu.Location = new System.Drawing.Point(12, 52);
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(134, 401);
             this.pMenu.TabIndex = 9;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.BorderSize = 2;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(813, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(24, 30);
+            this.btnClose.TabIndex = 10;
+            this.btnClose.Text = "x";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(849, 465);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pRenderBody);
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de gestion de PetShop";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicio_FormClosing);
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,6 +124,7 @@ namespace PetShopForms
         private System.Windows.Forms.Label lblUserType;
         private System.Windows.Forms.Panel pRenderBody;
         private System.Windows.Forms.Panel pMenu;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

@@ -33,21 +33,15 @@ namespace Entidades
             }
         }
 
+        public Empleado(string nombre, string apellido, string usuario, string contrasenia, double cuil, double sueldo) : base(nombre, apellido, usuario, contrasenia, cuil)
+        {
+            this.sueldo = sueldo;
+        }
 
-        public Empleado(string nombre, string apellido, string usuario, string contrasenia, double cuil, double sueldo) : base(nombre, apellido, cuil)
-        {
-            this.Usuario = usuario;
-            this.Contrasenia = contrasenia;
-        }
-        protected bool AltaCliente()
-        {
-            return true;//Llamar a la sobrecarga y ver el resultado de la suma
-        }
         protected void Vender(Cliente cliente, Producto producto, int cantidad)
         {
 
         }
-
 
         public static bool CrearEmpleadoPrueba()
         {

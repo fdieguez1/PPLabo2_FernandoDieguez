@@ -17,27 +17,47 @@ namespace PetShopForms.Vistas.Persona
         public string Usuario
         {
             get { return this.usuario; }
-            set { this.usuario = value; }
+            set
+            {
+                this.txtUsuario.Text = value;
+                this.usuario = value;
+            }
         }
         public string Contrasenia
         {
             get { return this.contrasenia; }
-            set { this.contrasenia = value; }
+            set
+            {
+                this.txtContrasenia.Text = value;
+                this.contrasenia = value;
+            }
         }
         public string Nombre
         {
             get { return this.nombre; }
-            set { this.nombre = value; }
+            set
+            {
+                this.txtNombre.Text = value;
+                this.nombre = value;
+            }
         }
         public string Apellido
         {
             get { return this.apellido; }
-            set { this.apellido = value; }
+            set
+            {
+                this.txtApellido.Text = value;
+                this.apellido = value;
+            }
         }
         public double Cuil
         {
             get { return this.cuil; }
-            set { this.cuil = value; }
+            set
+            {
+                this.txtCuil.Text = value.ToString();
+                this.cuil = value;
+            }
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -59,7 +79,7 @@ namespace PetShopForms.Vistas.Persona
             }
             else
             {
-                txtCuil.Text.Remove(txtCuil.Text.Length - 1);
+                txtCuil.Text.Remove(0, txtCuil.Text.Length);
             }
 
         }

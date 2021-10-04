@@ -24,7 +24,7 @@ namespace Entidades
         }
 
 
-        public Cliente(string nombre, string apellido, double saldo, double cuil) : base(nombre, apellido, cuil)
+        public Cliente(string nombre, string apellido, string usuario, string contrasenia, double saldo, double cuil) : base(nombre, apellido, usuario, contrasenia, cuil)
         {
             this.Saldo = saldo;
         }

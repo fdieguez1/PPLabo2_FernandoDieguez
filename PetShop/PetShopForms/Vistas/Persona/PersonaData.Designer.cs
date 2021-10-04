@@ -46,9 +46,10 @@ namespace PetShopForms.Vistas.Persona
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(3, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.Size = new System.Drawing.Size(70, 14);
             this.label4.TabIndex = 9;
             this.label4.Text = "Contraseña";
             // 
@@ -59,33 +60,36 @@ namespace PetShopForms.Vistas.Persona
             this.txtContrasenia.Location = new System.Drawing.Point(4, 117);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(314, 23);
-            this.txtContrasenia.TabIndex = 5;
+            this.txtContrasenia.TabIndex = 4;
             this.txtContrasenia.TextChanged += new System.EventHandler(this.txtContrasenia_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(164, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
+            this.label3.Size = new System.Drawing.Size(51, 14);
             this.label3.TabIndex = 7;
             this.label3.Text = "Apellido";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(4, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(49, 14);
             this.label2.TabIndex = 6;
             this.label2.Text = "Usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(3, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 15);
+            this.label1.Size = new System.Drawing.Size(113, 14);
             this.label1.TabIndex = 5;
             this.label1.Text = "Cuil (solo números)";
             // 
@@ -106,7 +110,7 @@ namespace PetShopForms.Vistas.Persona
             this.txtUsuario.Location = new System.Drawing.Point(4, 70);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(314, 23);
-            this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.TabIndex = 3;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtCuil
@@ -116,7 +120,7 @@ namespace PetShopForms.Vistas.Persona
             this.txtCuil.Location = new System.Drawing.Point(3, 161);
             this.txtCuil.Name = "txtCuil";
             this.txtCuil.Size = new System.Drawing.Size(314, 23);
-            this.txtCuil.TabIndex = 3;
+            this.txtCuil.TabIndex = 5;
             this.txtCuil.TextChanged += new System.EventHandler(this.txtCuil_TextChanged);
             // 
             // txtNombre
@@ -130,9 +134,10 @@ namespace PetShopForms.Vistas.Persona
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNombre.Location = new System.Drawing.Point(4, 4);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(51, 15);
+            this.lblNombre.Size = new System.Drawing.Size(51, 14);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 

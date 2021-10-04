@@ -98,20 +98,19 @@ namespace Entidades
             PrevId = 0;
         }
 
-        public Persona(string nombre, string apellido)
+        public Persona(string nombre, string apellido, string usuario, string contrasenia, double cuil)
         {
             this.Id = ++PrevId;
             PrevId = this.Id;
             this.Nombre = nombre;
             this.Apellido = apellido;
-        }
-
-        public Persona(string nombre, string apellido, double cuil) : this(nombre, apellido)
-        {
+            this.Usuario = usuario;
+            this.Contrasenia = contrasenia;
             this.Cuil = cuil;
         }
 
-        public virtual string Mostrar() {
+        public virtual string Mostrar()
+        {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Id: {this.Id} Usuario: {this.Usuario}");
             sb.AppendLine($"Nombre completo: { this.NombreCompleto} Cuil: { this.Cuil.ToString()}");

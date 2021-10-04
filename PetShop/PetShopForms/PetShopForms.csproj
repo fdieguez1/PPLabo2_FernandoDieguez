@@ -16,13 +16,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Vistas\Empleado\Agregar.cs">
+    <Compile Update="Vistas\Empleado\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Empleado\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Eliminar.cs">
+    <Compile Update="Vistas\Empleado\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Empleado\Listado.cs">

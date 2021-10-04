@@ -30,13 +30,13 @@ namespace PetShopForms.Vistas.Empleado
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pIsAdmin = new System.Windows.Forms.Panel();
+            this.chkIsSuperAdmin = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBono = new System.Windows.Forms.TextBox();
+            this.chkIsAdmin = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSueldo = new System.Windows.Forms.TextBox();
-            this.chkIsAdmin = new System.Windows.Forms.CheckBox();
-            this.txtBono = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.chkIsSuperAdmin = new System.Windows.Forms.CheckBox();
-            this.pIsAdmin = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pIsAdmin.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,57 @@ namespace PetShopForms.Vistas.Empleado
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(289, 169);
             this.panel1.TabIndex = 1;
+            // 
+            // pIsAdmin
+            // 
+            this.pIsAdmin.Controls.Add(this.chkIsSuperAdmin);
+            this.pIsAdmin.Controls.Add(this.label2);
+            this.pIsAdmin.Controls.Add(this.txtBono);
+            this.pIsAdmin.Location = new System.Drawing.Point(4, 86);
+            this.pIsAdmin.Name = "pIsAdmin";
+            this.pIsAdmin.Size = new System.Drawing.Size(273, 78);
+            this.pIsAdmin.TabIndex = 8;
+            // 
+            // chkIsSuperAdmin
+            // 
+            this.chkIsSuperAdmin.AutoSize = true;
+            this.chkIsSuperAdmin.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chkIsSuperAdmin.Location = new System.Drawing.Point(0, 50);
+            this.chkIsSuperAdmin.Name = "chkIsSuperAdmin";
+            this.chkIsSuperAdmin.Size = new System.Drawing.Size(110, 18);
+            this.chkIsSuperAdmin.TabIndex = 10;
+            this.chkIsSuperAdmin.Text = "Es super admin";
+            this.chkIsSuperAdmin.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 14);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Bono";
+            // 
+            // txtBono
+            // 
+            this.txtBono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBono.Location = new System.Drawing.Point(0, 21);
+            this.txtBono.Name = "txtBono";
+            this.txtBono.Size = new System.Drawing.Size(273, 23);
+            this.txtBono.TabIndex = 8;
+            // 
+            // chkIsAdmin
+            // 
+            this.chkIsAdmin.AutoSize = true;
+            this.chkIsAdmin.Location = new System.Drawing.Point(4, 60);
+            this.chkIsAdmin.Name = "chkIsAdmin";
+            this.chkIsAdmin.Size = new System.Drawing.Size(114, 19);
+            this.chkIsAdmin.TabIndex = 7;
+            this.chkIsAdmin.Text = "Es administrador";
+            this.chkIsAdmin.UseVisualStyleBackColor = true;
+            this.chkIsAdmin.CheckedChanged += new System.EventHandler(this.chkIsAdmin_CheckedChanged);
             // 
             // label1
             // 
@@ -70,59 +121,8 @@ namespace PetShopForms.Vistas.Empleado
             this.txtSueldo.Location = new System.Drawing.Point(4, 30);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(273, 23);
-            this.txtSueldo.TabIndex = 0;
+            this.txtSueldo.TabIndex = 6;
             this.txtSueldo.TextChanged += new System.EventHandler(this.txtSueldo_TextChanged);
-            // 
-            // chkIsAdmin
-            // 
-            this.chkIsAdmin.AutoSize = true;
-            this.chkIsAdmin.Location = new System.Drawing.Point(4, 60);
-            this.chkIsAdmin.Name = "chkIsAdmin";
-            this.chkIsAdmin.Size = new System.Drawing.Size(114, 19);
-            this.chkIsAdmin.TabIndex = 7;
-            this.chkIsAdmin.Text = "Es administrador";
-            this.chkIsAdmin.UseVisualStyleBackColor = true;
-            this.chkIsAdmin.CheckedChanged += new System.EventHandler(this.chkIsAdmin_CheckedChanged);
-            // 
-            // txtBono
-            // 
-            this.txtBono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBono.Location = new System.Drawing.Point(0, 21);
-            this.txtBono.Name = "txtBono";
-            this.txtBono.Size = new System.Drawing.Size(273, 23);
-            this.txtBono.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 14);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Bono";
-            // 
-            // chkIsSuperAdmin
-            // 
-            this.chkIsSuperAdmin.AutoSize = true;
-            this.chkIsSuperAdmin.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chkIsSuperAdmin.Location = new System.Drawing.Point(0, 50);
-            this.chkIsSuperAdmin.Name = "chkIsSuperAdmin";
-            this.chkIsSuperAdmin.Size = new System.Drawing.Size(110, 18);
-            this.chkIsSuperAdmin.TabIndex = 9;
-            this.chkIsSuperAdmin.Text = "Es super admin";
-            this.chkIsSuperAdmin.UseVisualStyleBackColor = true;
-            // 
-            // pIsAdmin
-            // 
-            this.pIsAdmin.Controls.Add(this.chkIsSuperAdmin);
-            this.pIsAdmin.Controls.Add(this.label2);
-            this.pIsAdmin.Controls.Add(this.txtBono);
-            this.pIsAdmin.Location = new System.Drawing.Point(4, 86);
-            this.pIsAdmin.Name = "pIsAdmin";
-            this.pIsAdmin.Size = new System.Drawing.Size(273, 78);
-            this.pIsAdmin.TabIndex = 8;
             // 
             // EmpleadoData
             // 
@@ -132,6 +132,7 @@ namespace PetShopForms.Vistas.Empleado
             this.Controls.Add(this.panel1);
             this.Name = "EmpleadoData";
             this.Text = "EmpleadoData";
+            this.Load += new System.EventHandler(this.EmpleadoData_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pIsAdmin.ResumeLayout(false);

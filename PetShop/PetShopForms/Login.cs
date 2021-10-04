@@ -46,7 +46,7 @@ namespace PetShopForms
                 if (auxUsuario != null)
                 {
                     Persona.UsuarioLogueado = auxUsuario;
-                    Form inicio = new Inicio();
+                    Form inicio = new Inicio(this);
                     inicio.Show();
                     this.Hide();
                 }

@@ -23,6 +23,12 @@ namespace Entidades
                 this.superAdminPower = value;
             }
         }
+        double bono;
+        public double Bono
+        {
+            get { return this.bono; }
+            set { this.bono = value; }
+        }
 
         static Administrador()
         {
@@ -32,11 +38,12 @@ namespace Entidades
         public Administrador(string nombre, string apellido, string usuario, string contrasenia, double cuil, double sueldo, bool superAdminPower, double bono) : base(nombre, apellido, usuario, contrasenia, cuil, sueldo)
         {
             this.SuperAdminPower = superAdminPower;
+            this.Bono = bono;
         }
 
         public static bool CrearAdminPrueba()
         {
-            Empleado auxAdmin = new Administrador("Elpe", "Rrito", "Admin", "utnfra2021", 20222222223, 1000000, true, 10000);
+            Empleado auxAdmin = new Administrador("Elpe", "Rrito", "Admin", "utnfra2021", 20222222223, 1000000, true, 100000);
             bool altaOk = Administrador.ListaEmpleados + auxAdmin;
             return altaOk;
         }
@@ -48,6 +55,6 @@ namespace Entidades
         {
 
         }
-        
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using PetShopForms.Vistas.Persona;
+﻿using Entidades;
+using PetShopForms.Vistas.Persona;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,11 +41,33 @@ namespace PetShopForms.Vistas.Empleado
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasenia) || cuil < 1
                 || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || sueldo < 1)
             {
+                MessageBox.Show("Todos los campos son requeridos",
+                                      "Error",
+                                      MessageBoxButtons.OK);
             }
-            Entidades.Empleado auxEmpleado = new Entidades.Empleado(nombre, apellido, usuario, contrasenia, sueldo, cuil)
+            else
             {
+                Entidades.Empleado auxEmpleado = new Entidades.Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
+                bool altaOk = Administrador.ListaEmpleados + auxEmpleado;
+                if (altaOk)
+                {
+                    MessageBox.Show("Alta de empleado exitosa",
+                                              "Carga exitosa",
+                                              MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Error en la carga del empleado",
+                                              "Error",
+                                              MessageBoxButtons.OK);
+                }
+                this.Close();
+            }
+        }
 
-            };
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

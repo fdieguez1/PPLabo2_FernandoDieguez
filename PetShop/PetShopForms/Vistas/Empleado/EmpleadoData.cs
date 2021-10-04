@@ -16,7 +16,11 @@ namespace PetShopForms.Vistas.Empleado
         public double Sueldo
         {
             get { return this.sueldo; }
-            set { this.sueldo = value; }
+            set
+            {
+                this.txtSueldo.Text = value.ToString();
+                this.sueldo = value;
+            }
         }
         public EmpleadoData()
         {
@@ -48,6 +52,12 @@ namespace PetShopForms.Vistas.Empleado
                 pIsAdmin.Enabled = false;
                 pIsAdmin.Visible = false;
             }
+        }
+
+        private void EmpleadoData_Load(object sender, EventArgs e)
+        {
+            pIsAdmin.Enabled = false;
+            pIsAdmin.Visible = false;
         }
     }
 }
