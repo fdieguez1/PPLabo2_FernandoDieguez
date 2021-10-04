@@ -35,29 +35,65 @@ namespace PetShopForms.Vistas.Empleado
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
-            int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
-            Form form = new Editar(selectedId);
-            DialogResult dialogRes = form.ShowDialog();
-            if (dialogRes != DialogResult.None)
+            if (this.dgvEmpleados.SelectedCells.Count > 0)
             {
-                CargarEmpleados();
+                int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
+                int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
+                Form form = new Editar(selectedId);
+                DialogResult dialogRes = form.ShowDialog();
+                if (dialogRes != DialogResult.None)
+                {
+                    CargarEmpleados();
+                }
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Form form = new Delete();
-            DialogResult dialogRes = form.ShowDialog();
-            if (dialogRes != DialogResult.None)
+            if (this.dgvEmpleados.SelectedCells.Count > 0)
             {
-                CargarEmpleados();
+                int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
+                int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
+                if (MessageBox.Show($"Seguro que desea eliminar el empleado de id: {selectedId}?",
+                                         "Confirmacion",
+                                         MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    foreach (Entidades.Empleado emp in Administrador.ListaEmpleados)
+                    {
+                        if (emp.Id == selectedId)
+                        {
+                            if (Administrador.ListaEmpleados - emp)
+                            {
+                                MessageBox.Show("Empleado eliminado",
+                                         "Operacion exitosa",
+                                         MessageBoxButtons.OK);
+
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Empleado no eliminado",
+                                           "Error",
+                                           MessageBoxButtons.OK);
+                                break;
+                            }
+                        }
+                    }
+                    CargarEmpleados();
+                }
             }
         }
 
         void CargarEmpleados()
         {
-            dgvEmpleados.DataSource = Entidades.Administrador.ListaEmpleados.GetRange(0, Entidades.Administrador.ListaEmpleados.Count);
+            if (Entidades.Administrador.ListaEmpleados.Count > 0)
+            {
+                dgvEmpleados.DataSource = new List<Entidades.Empleado>(Administrador.ListaEmpleados);
+            }
         }
     }
 }

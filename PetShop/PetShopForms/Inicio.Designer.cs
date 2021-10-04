@@ -40,10 +40,10 @@ namespace PetShopForms
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblWelcome.Location = new System.Drawing.Point(12, 8);
+            this.lblWelcome.Font = new System.Drawing.Font("Roboto Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.Location = new System.Drawing.Point(12, 16);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(94, 19);
+            this.lblWelcome.Size = new System.Drawing.Size(92, 19);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Bienvenido, ";
             // 
@@ -62,6 +62,8 @@ namespace PetShopForms
             this.pRenderBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pRenderBody.BackColor = System.Drawing.Color.White;
+            this.pRenderBody.ForeColor = System.Drawing.Color.Black;
             this.pRenderBody.Location = new System.Drawing.Point(152, 52);
             this.pRenderBody.Name = "pRenderBody";
             this.pRenderBody.Size = new System.Drawing.Size(685, 401);
@@ -98,7 +100,7 @@ namespace PetShopForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(849, 465);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pMenu);
@@ -106,7 +108,7 @@ namespace PetShopForms
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio";

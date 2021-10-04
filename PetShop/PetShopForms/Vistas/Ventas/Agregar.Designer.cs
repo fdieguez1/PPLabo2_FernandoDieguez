@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Productos
+namespace PetShopForms.Vistas.Ventas
 {
     partial class Agregar
     {

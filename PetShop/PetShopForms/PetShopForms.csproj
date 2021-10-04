@@ -16,7 +16,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Vistas\Empleado\Delete.cs">
+    <Compile Update="Vistas\Cliente\Agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Cliente\Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Cliente\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Empleado\Editar.cs">
@@ -34,22 +40,22 @@
     <Compile Update="Vistas\Producto\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Eliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Vistas\Producto\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Venta\Agregar.cs">
+    <Compile Update="Vistas\Producto\ProductData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Venta\Editar.cs">
+    <Compile Update="Vistas\Ventas\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Venta\Eliminar.cs">
+    <Compile Update="Vistas\Ventas\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Venta\Listado.cs">
+    <Compile Update="Vistas\Ventas\Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Ventas\VentaDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -114,6 +114,7 @@ namespace PetShopForms.Vistas.Empleado
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.label1);
             this.Name = "Listado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
             this.Load += new System.EventHandler(this.Listado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();

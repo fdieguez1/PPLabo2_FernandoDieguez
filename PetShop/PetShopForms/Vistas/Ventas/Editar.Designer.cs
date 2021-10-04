@@ -1,7 +1,7 @@
 ﻿
-namespace PetShopForms.Vistas.Empleado
+namespace PetShopForms.Vistas.Ventas
 {
-    partial class Delete
+    partial class Editar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PetShopForms.Vistas.Empleado
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delete));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
             this.pFullContainer = new System.Windows.Forms.Panel();
@@ -65,7 +65,6 @@ namespace PetShopForms.Vistas.Empleado
             this.btnAccept.TabIndex = 1;
             this.btnAccept.Text = "Aceptar";
             this.btnAccept.UseVisualStyleBackColor = false;
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // pFullContainer
             // 
@@ -74,7 +73,7 @@ namespace PetShopForms.Vistas.Empleado
             this.pFullContainer.Size = new System.Drawing.Size(341, 398);
             this.pFullContainer.TabIndex = 2;
             // 
-            // Delete
+            // Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,10 +83,9 @@ namespace PetShopForms.Vistas.Empleado
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Delete";
+            this.Name = "Editar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eliminar empleado";
-            this.Load += new System.EventHandler(this.Agregar_Load);
+            this.Text = "Editar empleado";
             this.ResumeLayout(false);
 
         }

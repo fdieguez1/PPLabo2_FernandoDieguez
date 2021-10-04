@@ -36,6 +36,12 @@ namespace PetShopForms
             Login = loginForm;
         }
 
+        /// <summary>
+        /// Metodo estatico que pasandole un controlcollection y un form, le da formato para mostrarse dentro del control sin barra superior y ocupando todo el espacio disponible
+        /// </summary>
+        /// <param name="controlCollection">Control al que se le va a realizar el Add() del formulario</param>
+        /// <param name="sourceForm">instancia del formulario a agregar</param>
+        /// <returns>devuelve la instancia del formulario con los formatos aplicados</returns>
         public static Form AddFormToControl(Control.ControlCollection controlCollection, Form sourceForm)
         {
             controlCollection.Remove(sourceForm);
@@ -47,6 +53,11 @@ namespace PetShopForms
             sourceForm.Show();
             return sourceForm;
         }
+        /// <summary>
+        /// Evento de carga del formulario de inicio, se verifica el rol del usuario logueado y se muestra el menu correspondiente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Inicio_Load(object sender, EventArgs e)
         {
             if (Persona.UsuarioLogueado is Administrador)
@@ -55,13 +66,17 @@ namespace PetShopForms
             }
             else
             {
-                Menu = new MenuEmpleado() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                Menu = new MenuEmpleado(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             }
             this.pMenu.Controls.Add(Menu);
             menu.Show();
             lblWelcome.Text = $"Bienvenido, {Persona.UsuarioLogueado.NombreCompleto}";
             lblUserType.Text = Persona.UsuarioLogueado is Administrador ? "Administrador" : "Empleado";
         }
+        /// <summary>
+        /// Metodo que se ocupa de cambiar contenido del paner principal del form Inicio con una instancia de un form dada, limpia el control y luego agrega la nueva vista
+        /// </summary>
+        /// <param name="formToUse">Instancia del form a mostrar</param>
         public void ChangeBody(Form formToUse)
         {
             pRenderBody.Controls.Clear();
@@ -73,6 +88,11 @@ namespace PetShopForms
             formToUse.Show();
         }
 
+        /// <summary>
+        /// Metodo que cierra la sesion del usuario y vuelve a la pantalla de ingreso/login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClose_Click(object sender, EventArgs e)
         {
             Persona.UsuarioLogueado = null;

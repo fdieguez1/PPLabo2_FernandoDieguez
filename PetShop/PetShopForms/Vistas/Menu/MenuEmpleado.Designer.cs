@@ -57,7 +57,6 @@ namespace PetShopForms.Vistas.Menu
             this.label1.TabIndex = 1;
             this.label1.Text = "Menu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnVentas
             // 
@@ -93,7 +92,6 @@ namespace PetShopForms.Vistas.Menu
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuEmpleado";
             this.Text = "MenuEmpleado";
-            this.Load += new System.EventHandler(this.MenuEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

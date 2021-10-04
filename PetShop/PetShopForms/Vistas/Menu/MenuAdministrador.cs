@@ -32,17 +32,17 @@ namespace PetShopForms.Vistas.Menu
         private void btnClientes_Click(object sender, EventArgs e)
         {
 
-            InicioForm.ChangeBody(new Cliente.Listado());
+            InicioForm.ChangeBody(new Clientes.Listado());
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            InicioForm.ChangeBody(new Venta.Listado());
+            InicioForm.ChangeBody(new Ventas.Listado());
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            InicioForm.ChangeBody(new Producto.Listado());
+            InicioForm.ChangeBody(new Productos.Listado());
         }
     }
 }

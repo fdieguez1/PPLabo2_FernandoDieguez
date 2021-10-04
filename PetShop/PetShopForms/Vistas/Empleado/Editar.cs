@@ -62,18 +62,17 @@ namespace PetShopForms.Vistas.Empleado
             else
             {
                 Entidades.Empleado auxEmpleado = new Entidades.Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
-                bool altaOk = Administrador.ListaEmpleados + auxEmpleado;
-                if (altaOk)
+                auxEmpleado.Id = selectedEmpleado.Id;
+                for (int i = 0; i < Administrador.ListaEmpleados.Count; i++)
                 {
-                    MessageBox.Show("Alta de empleado exitosa",
-                                              "Carga exitosa",
-                                              MessageBoxButtons.OK);
-                }
-                else
-                {
-                    MessageBox.Show("Error en la carga del empleado",
-                                              "Error",
-                                              MessageBoxButtons.OK);
+                    if (Administrador.ListaEmpleados[i] == selectedEmpleado)
+                    {
+                        Administrador.ListaEmpleados[i] = auxEmpleado;
+                        MessageBox.Show("Empleado editado con exito",
+                                    "Operacion exitosa",
+                                    MessageBoxButtons.OK);
+                        break;
+                    }
                 }
                 this.Close();
             }

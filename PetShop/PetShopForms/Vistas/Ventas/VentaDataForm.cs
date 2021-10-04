@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Venta
+namespace PetShopForms.Vistas.Ventas
 {
-    public partial class Listado : Form
+    public partial class VentaDataForm : Form
     {
-        public Listado()
+        private void lblNombre_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
     }
 }
