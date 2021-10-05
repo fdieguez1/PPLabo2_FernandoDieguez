@@ -10,8 +10,8 @@ namespace Entidades
     public class Producto
     {
         public static int PrevId;
-        string descripcion;
         int id;
+<<<<<<< HEAD
 <<<<<<< HEAD
         double precio;
         int cantidad;
@@ -58,6 +58,10 @@ namespace Entidades
         }
 =======
 >>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+=======
+        public double precio;
+        public int cantidad;
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
         public int Id
         {
             get
@@ -74,28 +78,18 @@ namespace Entidades
             PrevId = 0;
         }
 
-
-        /// <summary>
-        /// Carga de prueba de productos hardcodeados
-        /// </summary>
-        /// <returns>devuelve true si logro la carga, false si no la logro</returns>
-        public static bool CrearProductoPrueba()
+        static List<Producto> listaProductos;
+        public static List<Producto> ListaProductos
         {
-            bool altaOk = false;
-            Random rnd = new Random();
-            int testCount = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                testCount++;
-                int salary = rnd.Next(10000, 100000);
-                Producto newProducto = new Producto($"producto{testCount}", (ETipoProducto)rnd.Next(0,3), rnd.Next(100,500), rnd.Next(5,20));
-                altaOk = ListaProductos + newProducto;
-                if (!altaOk)
-                {
-                    break;
-                }
-            }
-            return altaOk;
+            get { return listaProductos; }
+            set { listaProductos = value; }
+        }
+
+        ETipoProducto tipoProducto;
+        public ETipoProducto TipoProducto
+        {
+            get { return this.tipoProducto; }
+            set { this.tipoProducto = value; }
         }
 
 <<<<<<< HEAD
@@ -105,17 +99,15 @@ namespace Entidades
         /// <param name="tipo">ETipoProducto Enumerado, de valores predefinidos, con el valor a ser asignado</param>
         /// <param name="precio">Precio del producto por unidad</param>
         /// <param name="cantidad">Cantidad de productos en existencia</param>
-        public Producto(string descripcion, ETipoProducto tipo, double precio, int cantidad)
+        public Producto(ETipoProducto tipo, double precio, int cantidad)
         {
             this.Id = ++PrevId;
             PrevId = this.Id;
             this.TipoProducto = tipo;
             this.Precio = precio;
             this.Cantidad = cantidad;
-            this.descripcion = descripcion;
         }
-        #region sobrecargas operadores
-        
+
         /// <summary>
         /// Sobrecarga del metodo + para agregar una carga de producto al listado de productos
         /// </summary>
@@ -161,6 +153,5 @@ namespace Entidades
             }
             return productos;
         }
-        #endregion
     }
 }

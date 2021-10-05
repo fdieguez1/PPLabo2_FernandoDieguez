@@ -34,12 +34,15 @@ namespace PetShopForms.Vistas.Cliente
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
 <<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.Designer.cs
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.Designer.cs
             this.label1.Size = new System.Drawing.Size(593, 43);
+=======
+            this.label1.Size = new System.Drawing.Size(800, 15);
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas):PetShop/PetShopForms/Vistas/Cliente/Listado.Designer.cs
             this.label1.TabIndex = 0;
             this.label1.Text = "Listado de Clientes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,9 +52,6 @@ namespace PetShopForms.Vistas.Cliente
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AllowUserToOrderColumns = true;
-            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -65,53 +65,41 @@ namespace PetShopForms.Vistas.Cliente
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvClientes.Location = new System.Drawing.Point(10, 85);
+            this.dgvClientes.Location = new System.Drawing.Point(0, 75);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowTemplate.Height = 25;
-            this.dgvClientes.Size = new System.Drawing.Size(593, 352);
+            this.dgvClientes.Size = new System.Drawing.Size(800, 375);
             this.dgvClientes.TabIndex = 1;
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(10, 47);
+            this.btnAdd.Location = new System.Drawing.Point(0, 46);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "+ Agregar";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(91, 47);
+            this.btnEdit.Location = new System.Drawing.Point(81, 46);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Editar";
-            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(172, 47);
+            this.btnDelete.Location = new System.Drawing.Point(162, 46);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Eliminar";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
 =======
@@ -126,14 +114,17 @@ namespace PetShopForms.Vistas.Cliente
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 <<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.Designer.cs
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.Designer.cs
             this.ClientSize = new System.Drawing.Size(613, 450);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas):PetShop/PetShopForms/Vistas/Cliente/Listado.Designer.cs
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.label1);
             this.Name = "Listado";
-            this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 =======
             this.ClientSize = new System.Drawing.Size(800, 450);

@@ -62,11 +62,11 @@ namespace PetShopForms.Vistas.Ventas
                 }
                 else
                 {
-                    foreach (Cliente clt in Empleado.ListaClientes)
+                    foreach (Cliente clt in Entidades.Empleado.ListaClientes)
                     {
                         if (clt.Id == selectedId)
                         {
-                            if (Empleado.ListaClientes - clt)
+                            if (Entidades.Empleado.ListaClientes - clt)
                             {
                                 MessageBox.Show("Empleado eliminado",
                                          "Operacion exitosa",
@@ -92,7 +92,7 @@ namespace PetShopForms.Vistas.Ventas
         {
             if (Venta.ListaVentas.Count > 0)
             {
-                dgvProductos.DataSource = Venta.ListarVentas();
+                dgvProductos.DataSource = new List<Entidades.Venta>(Venta.ListaVentas);
             }
         }
        

@@ -65,19 +65,19 @@ namespace PetShopForms
         public void ChangeBody(Form formToUse)
         {
             pRenderBody.Controls.Clear();
-            AddFormToControl(pRenderBody.Controls, formToUse);
+            formToUse.Dock = DockStyle.Fill;
+            formToUse.TopLevel = false;
+            formToUse.TopMost = true;
+            formToUse.FormBorderStyle = FormBorderStyle.None;
+            pRenderBody.Controls.Add(formToUse);
+            formToUse.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro que desea cerrar su sesion?",
-                                    "Confirmacion",
-                                    MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Persona.UsuarioLogueado = null;
-                this.Login.Show();
-                this.Close();
-            }
+            Persona.UsuarioLogueado = null;
+            this.Login.Show();
+            this.Close();
         }
        
     }

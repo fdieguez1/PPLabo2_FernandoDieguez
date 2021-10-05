@@ -62,13 +62,13 @@ namespace PetShopForms.Vistas.Cliente
                 }
                 else
                 {
-                    foreach (Cliente clt in Empleado.ListaClientes)
+                    foreach (Cliente clt in Entidades.Empleado.ListaClientes)
                     {
                         if (clt.Id == selectedId)
                         {
-                            if (Empleado.ListaClientes - clt)
+                            if (Entidades.Empleado.ListaClientes - clt)
                             {
-                                MessageBox.Show("Cliente eliminado",
+                                MessageBox.Show("Empleado eliminado",
                                          "Operacion exitosa",
                                          MessageBoxButtons.OK);
 
@@ -76,7 +76,7 @@ namespace PetShopForms.Vistas.Cliente
                             }
                             else
                             {
-                                MessageBox.Show("Cliente no eliminado",
+                                MessageBox.Show("Empleado no eliminado",
                                            "Error",
                                            MessageBoxButtons.OK);
                                 break;
@@ -90,9 +90,9 @@ namespace PetShopForms.Vistas.Cliente
 
         void CargarClientes()
         {
-            if (Empleado.ListaClientes.Count > 0)
+            if (Entidades.Empleado.ListaClientes.Count > 0)
             {
-                dgvClientes.DataSource = new List<Cliente>(Empleado.ListaClientes);
+                dgvClientes.DataSource = new List<Entidades.Cliente>(Entidades.Empleado.ListaClientes);
             }
 =======
 

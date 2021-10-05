@@ -34,8 +34,6 @@ namespace PetShopForms.Vistas.Productos
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pPersonaPanel = new System.Windows.Forms.Panel();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pPersonaPanel.SuspendLayout();
@@ -45,7 +43,7 @@ namespace PetShopForms.Vistas.Productos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(0, 106);
+            this.label3.Location = new System.Drawing.Point(164, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 14);
             this.label3.TabIndex = 7;
@@ -55,27 +53,25 @@ namespace PetShopForms.Vistas.Productos
             // 
             this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantidad.Location = new System.Drawing.Point(0, 123);
+            this.txtCantidad.Location = new System.Drawing.Point(164, 23);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(309, 23);
-            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.Size = new System.Drawing.Size(154, 23);
+            this.txtCantidad.TabIndex = 2;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrecio.Location = new System.Drawing.Point(0, 76);
+            this.txtPrecio.Location = new System.Drawing.Point(4, 23);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(309, 23);
-            this.txtPrecio.TabIndex = 2;
+            this.txtPrecio.Size = new System.Drawing.Size(154, 23);
+            this.txtPrecio.TabIndex = 1;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(0, 57);
+            this.lblNombre.Location = new System.Drawing.Point(4, 4);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(41, 14);
             this.lblNombre.TabIndex = 0;
@@ -83,8 +79,6 @@ namespace PetShopForms.Vistas.Productos
             // 
             // pPersonaPanel
             // 
-            this.pPersonaPanel.Controls.Add(this.txtDescripcion);
-            this.pPersonaPanel.Controls.Add(this.label2);
             this.pPersonaPanel.Controls.Add(this.cmbTipo);
             this.pPersonaPanel.Controls.Add(this.label1);
             this.pPersonaPanel.Controls.Add(this.label3);
@@ -94,45 +88,22 @@ namespace PetShopForms.Vistas.Productos
             this.pPersonaPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pPersonaPanel.Location = new System.Drawing.Point(0, 0);
             this.pPersonaPanel.Name = "pPersonaPanel";
-            this.pPersonaPanel.Size = new System.Drawing.Size(321, 244);
+            this.pPersonaPanel.Size = new System.Drawing.Size(321, 118);
             this.pPersonaPanel.TabIndex = 1;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.Location = new System.Drawing.Point(0, 28);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(309, 23);
-            this.txtDescripcion.TabIndex = 1;
-            this.txtDescripcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 14);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Descripcion";
             // 
             // cmbTipo
             // 
-            this.cmbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(0, 171);
+            this.cmbTipo.Location = new System.Drawing.Point(4, 78);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(309, 23);
-            this.cmbTipo.TabIndex = 4;
+            this.cmbTipo.Size = new System.Drawing.Size(314, 23);
+            this.cmbTipo.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 153);
+            this.label1.Location = new System.Drawing.Point(4, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 14);
             this.label1.TabIndex = 8;
@@ -142,7 +113,7 @@ namespace PetShopForms.Vistas.Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 249);
+            this.ClientSize = new System.Drawing.Size(321, 124);
             this.Controls.Add(this.pPersonaPanel);
             this.Name = "ProductData";
             this.Text = "Agregar";
@@ -161,7 +132,5 @@ namespace PetShopForms.Vistas.Productos
         private System.Windows.Forms.Panel pPersonaPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label label2;
     }
 }

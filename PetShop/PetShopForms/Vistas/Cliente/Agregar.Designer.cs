@@ -34,8 +34,8 @@ namespace PetShopForms.Vistas.Cliente
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
             this.pFullContainer = new System.Windows.Forms.Panel();
-            this.txtSaldo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
             this.pFullContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,15 +81,6 @@ namespace PetShopForms.Vistas.Cliente
             this.pFullContainer.TabIndex = 2;
             this.pFullContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pFullContainer_Paint);
             // 
-            // txtSaldo
-            // 
-            this.txtSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSaldo.Location = new System.Drawing.Point(4, 331);
-            this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(334, 23);
-            this.txtSaldo.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -98,6 +89,15 @@ namespace PetShopForms.Vistas.Cliente
             this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saldo";
+            // 
+            // txtSaldo
+            // 
+            this.txtSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSaldo.Location = new System.Drawing.Point(4, 331);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(334, 23);
+            this.txtSaldo.TabIndex = 1;
             // 
             // Agregar
             // 
@@ -113,7 +113,7 @@ namespace PetShopForms.Vistas.Cliente
             this.MinimizeBox = false;
             this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar cliente";
+            this.Text = "Agregar empleado";
             this.Load += new System.EventHandler(this.Agregar_Load);
             this.pFullContainer.ResumeLayout(false);
             this.pFullContainer.PerformLayout();

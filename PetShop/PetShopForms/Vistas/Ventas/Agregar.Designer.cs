@@ -59,7 +59,7 @@ namespace PetShopForms.Vistas.Ventas
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAccept.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAccept.ForeColor = System.Drawing.Color.White;
-            this.btnAccept.Location = new System.Drawing.Point(668, 447);
+            this.btnAccept.Location = new System.Drawing.Point(279, 447);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(75, 41);
             this.btnAccept.TabIndex = 1;
@@ -71,14 +71,15 @@ namespace PetShopForms.Vistas.Ventas
             // 
             this.pFullContainer.Location = new System.Drawing.Point(12, 17);
             this.pFullContainer.Name = "pFullContainer";
-            this.pFullContainer.Size = new System.Drawing.Size(731, 398);
+            this.pFullContainer.Size = new System.Drawing.Size(341, 398);
             this.pFullContainer.TabIndex = 2;
+            this.pFullContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pFullContainer_Paint);
             // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 500);
+            this.ClientSize = new System.Drawing.Size(366, 500);
             this.Controls.Add(this.pFullContainer);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.btnCancel);
@@ -88,7 +89,7 @@ namespace PetShopForms.Vistas.Ventas
             this.MinimizeBox = false;
             this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar venta";
+            this.Text = "Agregar empleado";
             this.Load += new System.EventHandler(this.Agregar_Load);
             this.ResumeLayout(false);
 

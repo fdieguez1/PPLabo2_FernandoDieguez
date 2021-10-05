@@ -16,7 +16,11 @@ namespace PetShopForms.Vistas.Cliente
         {
             InitializeComponent();
 <<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Editar.cs
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Editar.cs
             foreach (Cliente clt in Empleado.ListaClientes)
+=======
+            foreach (Cliente clt in Entidades.Empleado.ListaClientes)
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas):PetShop/PetShopForms/Vistas/Cliente/Editar.cs
             {
                 if (clt.Id == clienteId)
                 {
@@ -58,11 +62,11 @@ namespace PetShopForms.Vistas.Cliente
             {
                 Cliente  auxCliente = new Cliente(nombre, apellido, usuario, contrasenia, saldo, cuil);
                 auxCliente.Id = selectedCliente.Id;
-                for (int i = 0; i < Empleado.ListaClientes.Count; i++)
+                for (int i = 0; i < Entidades.Empleado.ListaClientes.Count; i++)
                 {
-                    if (Empleado.ListaClientes[i] == selectedCliente)
+                    if (Entidades.Empleado.ListaClientes[i] == selectedCliente)
                     {
-                        Empleado.ListaClientes[i] = auxCliente;
+                        Entidades.Empleado.ListaClientes[i] = auxCliente;
                         MessageBox.Show("Empleado editado con exito",
                                     "Operacion exitosa",
                                     MessageBoxButtons.OK);

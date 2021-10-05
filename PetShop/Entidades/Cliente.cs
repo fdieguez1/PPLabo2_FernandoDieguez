@@ -36,9 +36,12 @@ namespace Entidades
             return sb.ToString();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         #region sobrecargas
         
+=======
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
         /// <summary>
         /// Sobrecarga del operador + para agregar clientes a la lista de clientes
         /// </summary>
@@ -74,6 +77,8 @@ namespace Entidades
         public static bool operator -(List<Cliente> listaClientes, Cliente Cliente)
         {
             bool removeOk = false;
+            if (Entidades.Empleado.CantidadMaximaClientes > listaClientes.Count)
+            {
                 foreach (Cliente clt in listaClientes)
                 {
                     if (clt == Cliente)
@@ -83,6 +88,7 @@ namespace Entidades
                     }
                 }
                 removeOk = false;
+            }
             return removeOk;
         }
         /// <summary>
@@ -105,6 +111,5 @@ namespace Entidades
         {
             return !(cliente1 == cliente2);
         }
-        #endregion
     }
 }

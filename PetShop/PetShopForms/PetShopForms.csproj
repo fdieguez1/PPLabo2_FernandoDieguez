@@ -17,33 +17,42 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Update="Vistas\Administradores\Listado.cs">
+=======
+    <Compile Update="Vistas\Cliente\Agregar.cs">
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Clientes\Agregar.cs">
+    <Compile Update="Vistas\Cliente\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="Vistas\Clientes\Editar.cs">
 =======
     <Compile Update="Vistas\Empleado\Delete.cs">
 >>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+=======
+    <Compile Update="Vistas\Cliente\Listado.cs">
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Clientes\Listado.cs">
+    <Compile Update="Vistas\Empleado\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleados\Editar.cs">
+    <Compile Update="Vistas\Empleado\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleados\Agregar.cs">
+    <Compile Update="Vistas\Empleado\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleados\Listado.cs">
+    <Compile Update="Vistas\Producto\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Productos\Agregar.cs">
+    <Compile Update="Vistas\Producto\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Compile Update="Vistas\Productos\Editar.cs">
       <SubType>Form</SubType>
@@ -54,6 +63,12 @@
     <Compile Update="Vistas\Productos\ProductData.cs">
 =======
     <Compile Update="Vistas\Producto\Eliminar.cs">
+=======
+    <Compile Update="Vistas\Producto\Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Producto\ProductData.cs">
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Producto\Listado.cs">

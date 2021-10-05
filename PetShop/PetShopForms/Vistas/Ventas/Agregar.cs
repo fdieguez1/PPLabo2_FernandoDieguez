@@ -23,12 +23,7 @@ namespace PetShopForms.Vistas.Ventas
 
         private void Agregar_Load(object sender, EventArgs e)
         {
-            VentaDataForm newMDIChild = new VentaDataForm();
-            this.IsMdiContainer = true;
-            newMDIChild.Dock = DockStyle.Fill;
-            newMDIChild.MdiParent = this;
-            newMDIChild.Show();
-            //ventaDataForm = (VentaDataForm)Inicio.AddFormToControl(pFullContainer.Controls, new VentaDataForm());
+            ventaDataForm = (VentaDataForm)Inicio.AddFormToControl(pFullContainer.Controls, new VentaDataForm());
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -41,6 +36,11 @@ namespace PetShopForms.Vistas.Ventas
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pFullContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

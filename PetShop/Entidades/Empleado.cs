@@ -20,7 +20,7 @@ namespace Entidades
         static Empleado()
         {
             ListaClientes = new List<Cliente>();
-            CantidadMaximaClientes = 20;
+            CantidadMaximaClientes = 10;
         }
 
         double sueldo;
@@ -44,9 +44,9 @@ namespace Entidades
         /// </summary>
         /// <param name="cliente">cliente que realiza la compra</param>
         /// <param name="producto">producto vendido</param>
-        /// <returns>devuelve true si logro la venta, false si fallo</returns>
-        protected bool Vender(Producto producto, Cliente cliente, int unidades)
+        protected void Vender(Cliente cliente, Producto producto)
         {
+<<<<<<< HEAD
             Venta auxVenta = new Venta(producto, cliente, unidades);
             bool altaOk = false;
             if (cliente.Saldo >= producto.Precio && producto.Cantidad > 0)
@@ -64,6 +64,9 @@ namespace Entidades
         {
 
 >>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+=======
+            //ToDo
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
         }
 
         public static bool CrearEmpleadoPrueba()
@@ -81,15 +84,18 @@ namespace Entidades
         public static bool operator +(List<Empleado> listaEmpleados, Empleado empleado)
         {
             bool altaOk = false;
-            foreach (Empleado empl in listaEmpleados)
+            if (Administrador.CantidadMaximaEmpleados > listaEmpleados.Count)
             {
-                if (empl == empleado)
+                foreach (Empleado empl in listaEmpleados)
                 {
-                    return false;
+                    if (empl == empleado)
+                    {
+                        return false;
+                    }
                 }
+                listaEmpleados.Add(empleado);
+                altaOk = true;
             }
-            listaEmpleados.Add(empleado);
-            altaOk = true;
             return altaOk;
         }
         public static bool operator ==(Empleado empleado1, Empleado empleado2)

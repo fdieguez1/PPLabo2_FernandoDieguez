@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Empleados
+namespace PetShopForms.Vistas.Empleado
 {
     partial class EmpleadoData
     {
@@ -92,7 +92,6 @@ namespace PetShopForms.Vistas.Empleados
             this.txtBono.Name = "txtBono";
             this.txtBono.Size = new System.Drawing.Size(273, 23);
             this.txtBono.TabIndex = 8;
-            this.txtBono.TextChanged += new System.EventHandler(this.txtBono_TextChanged);
             // 
             // chkIsAdmin
             // 

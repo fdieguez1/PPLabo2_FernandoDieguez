@@ -10,17 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Empleados
+namespace PetShopForms.Vistas.Empleado
 {
     public partial class Editar : Form
     {
         public PersonaData PersonaDataForm;
         public EmpleadoData EmpleadoDataForm;
-        public Empleado selectedEmpleado;
+        public Entidades.Empleado selectedEmpleado;
         public Editar(int empleadoId)
         {
             InitializeComponent();
-            foreach (Empleado emp in Administrador.ListaEmpleados)
+            foreach (Entidades.Empleado emp in Administrador.ListaEmpleados)
             {
                 if (emp.Id == empleadoId)
                 {
@@ -31,7 +31,7 @@ namespace PetShopForms.Vistas.Empleados
 
         private void Editar_Load(object sender, EventArgs e)
         {
-            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new EmpleadoData());
+            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new Empleado.EmpleadoData());
             PersonaDataForm = (PersonaData)Inicio.AddFormToControl(pFullContainer.Controls, new Persona.PersonaData());
             EmpleadoDataForm.Sueldo = selectedEmpleado.Sueldo;
             PersonaDataForm.Nombre = selectedEmpleado.Nombre;
@@ -62,7 +62,11 @@ namespace PetShopForms.Vistas.Empleados
             else
             {
 <<<<<<< HEAD:PetShop/PetShopForms/Vistas/Empleados/Editar.cs
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Empleados/Editar.cs
                 Empleado auxEmpleado = new Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
+=======
+                Entidades.Empleado auxEmpleado = new Entidades.Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas):PetShop/PetShopForms/Vistas/Empleado/Editar.cs
                 auxEmpleado.Id = selectedEmpleado.Id;
                 for (int i = 0; i < Administrador.ListaEmpleados.Count; i++)
 =======

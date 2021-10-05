@@ -30,7 +30,7 @@ namespace PetShopForms
             bool testEmpleadoOk = Empleado.CrearEmpleadoPrueba();
             if (!testEmpleadoOk)
             {
-                MessageBox.Show("Problema al cargar empleados",
+                MessageBox.Show("Problema al cargar empleado mock",
                                       "Error",
                                       MessageBoxButtons.OK);
             }
@@ -38,21 +38,7 @@ namespace PetShopForms
             bool testClientesOk = Cliente.CrearClientesPrueba();
             if (!testClientesOk)
             {
-                MessageBox.Show("Problema al cargar clientes",
-                                      "Error",
-                                      MessageBoxButtons.OK);
-            }
-            bool testProductoOk = Producto.CrearProductoPrueba();
-            if (!testProductoOk)
-            {
-                MessageBox.Show("Problema al cargar los producto",
-                                      "Error",
-                                      MessageBoxButtons.OK);
-            }
-            bool testVentasOk = Venta.CrearVentaPrueba();
-            if (!testVentasOk)
-            {
-                MessageBox.Show("Problema al cargar ventas",
+                MessageBox.Show("Problema al cargar cliente mock",
                                       "Error",
                                       MessageBoxButtons.OK);
             }

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Empleados
+namespace PetShopForms.Vistas.Empleado
 {
     public partial class Agregar : Form
     {
@@ -23,27 +23,23 @@ namespace PetShopForms.Vistas.Empleados
 
         private void Agregar_Load(object sender, EventArgs e)
         {
-            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new EmpleadoData());
+            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new Empleado.EmpleadoData());
             PersonaDataForm = (PersonaData)Inicio.AddFormToControl(pFullContainer.Controls, new Persona.PersonaData());
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
             string usuario, contrasenia, nombre, apellido;
-            double sueldo, cuil, bono;
-            bool isAdmin, isSuperAdmin;
+            double sueldo, cuil;
+
             usuario = PersonaDataForm.Usuario;
             contrasenia = PersonaDataForm.Contrasenia;
             cuil = PersonaDataForm.Cuil;
             nombre = PersonaDataForm.Nombre;
             apellido = PersonaDataForm.Apellido;
             sueldo = EmpleadoDataForm.Sueldo;
-            isAdmin = EmpleadoDataForm.IsAdmin;
-            isSuperAdmin = EmpleadoDataForm.IsSuperAdmin;
-            bono = EmpleadoDataForm.Bono;
-
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasenia) || cuil < 1
-                || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || sueldo < 1 || (isAdmin && bono < 1))
+                || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || sueldo < 1)
             {
                 MessageBox.Show("Todos los campos son requeridos",
                                       "Error",
@@ -51,23 +47,11 @@ namespace PetShopForms.Vistas.Empleados
             }
             else
             {
-                bool altaOk = false;
-                string userType = "";
-                if (isAdmin) {
-                    Administrador auxAdmin = new Administrador(nombre, apellido, usuario, contrasenia, cuil, sueldo, isSuperAdmin, bono);
-                    altaOk = Administrador.ListaEmpleados + auxAdmin;
-                    userType = auxAdmin.GetType().ToString();
-                }
-                else
-                {
-                    Empleado auxEmpleado = new Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
-                    altaOk = Administrador.ListaEmpleados + auxEmpleado;
-                    userType = auxEmpleado.GetType().ToString();
-                }
-                userType = userType.Split('.')[1];
+                Entidades.Empleado auxEmpleado = new Entidades.Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
+                bool altaOk = Administrador.ListaEmpleados + auxEmpleado;
                 if (altaOk)
                 {
-                    MessageBox.Show($"Alta de {userType} exitosa",
+                    MessageBox.Show("Alta de empleado exitosa",
                                               "Carga exitosa",
                                               MessageBoxButtons.OK);
                 }

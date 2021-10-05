@@ -28,13 +28,11 @@ namespace PetShopForms.Vistas.Producto
             ETipoProducto tipoProd;
             double precio;
             int cantidad;
-            string descripcion;
             cantidad = ProductDataForm.Cantidad;
             tipoProd = ProductDataForm.TipoProd;
             precio = ProductDataForm.Precio;
-            descripcion = ProductDataForm.Descripcion;
 
-            if (string.IsNullOrEmpty(descripcion) || precio < 1 || cantidad < 1)
+            if (precio < 1 || cantidad < 1)
             {
                 MessageBox.Show("Todos los campos son requeridos",
                                       "Error",
@@ -42,7 +40,7 @@ namespace PetShopForms.Vistas.Producto
             }
             else
             {
-                Producto auxProducto = new Producto(descripcion, tipoProd, precio, cantidad);
+                Producto auxProducto = new Producto(tipoProd, precio, cantidad);
                 bool altaOk = Producto.ListaProductos + auxProducto;
                 if (altaOk)
                 {
