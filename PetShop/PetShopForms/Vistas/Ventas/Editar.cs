@@ -1,6 +1,6 @@
 ﻿using Entidades;
 using Entidades.Enums;
-using PetShopForms.Vistas.Productos;
+using PetShopForms.Vistas.Ventas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

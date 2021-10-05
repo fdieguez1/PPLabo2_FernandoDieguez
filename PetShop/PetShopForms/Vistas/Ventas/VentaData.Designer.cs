@@ -1,7 +1,7 @@
 ﻿
 namespace PetShopForms.Vistas.Ventas
 {
-    partial class VentaDataForm
+    partial class VentaData
     {
         /// <summary>
         /// Required designer variable.

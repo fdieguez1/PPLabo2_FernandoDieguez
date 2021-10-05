@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace PetShopForms.Vistas.Ventas
 {
-    public partial class VentaDataForm : Form
+    public partial class VentaData : Form
     {
         double cantidad;
         public double Cantidad
