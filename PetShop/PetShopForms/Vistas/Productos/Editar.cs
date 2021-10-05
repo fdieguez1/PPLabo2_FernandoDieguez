@@ -1,7 +1,4 @@
-﻿using Entidades;
-using Entidades.Enums;
-using PetShopForms.Vistas.Productos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,15 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Productos
+namespace PetShopForms.Vistas.Producto
 {
     public partial class Editar : Form
     {
-        public ProductData ProductDataForm;
-        public Producto selectedProduct;
-        public Editar(int productId)
+        public Editar()
         {
             InitializeComponent();
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Editar.cs
             foreach (Producto prd in Producto.ListaProductos)
             {
                 if (prd.Id == productId)
@@ -76,6 +72,8 @@ namespace PetShopForms.Vistas.Productos
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Editar.cs
         }
     }
 }

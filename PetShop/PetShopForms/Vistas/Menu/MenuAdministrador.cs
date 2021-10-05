@@ -32,7 +32,7 @@ namespace PetShopForms.Vistas.Menu
         private void btnClientes_Click(object sender, EventArgs e)
         {
 
-            InicioForm.ChangeBody(new Clientes.Listado());
+            InicioForm.ChangeBody(new Cliente.Listado());
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -42,12 +42,16 @@ namespace PetShopForms.Vistas.Menu
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            InicioForm.ChangeBody(new Ventas.Listado());
+            InicioForm.ChangeBody(new Venta.Listado());
         }
 
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             InicioForm.ChangeBody(new Administradores.Listado());
+=======
+            InicioForm.ChangeBody(new Producto.Listado());
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Clientes
+namespace PetShopForms.Vistas.Cliente
 {
     public partial class Listado : Form
     {
@@ -18,8 +17,9 @@ namespace PetShopForms.Vistas.Clientes
             InitializeComponent();
         }
 
-        private void Listado_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.cs
             CargarClientes();
         }
 
@@ -94,6 +94,9 @@ namespace PetShopForms.Vistas.Clientes
             {
                 dgvClientes.DataSource = new List<Cliente>(Empleado.ListaClientes);
             }
+=======
+
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Cliente/Listado.cs
         }
     }
 }

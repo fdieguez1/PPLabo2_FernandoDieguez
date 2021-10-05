@@ -7,16 +7,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-#pragma warning disable CS0661 
-    /// <summary>
-    /// Clase producto que representa los objetos a vender el en petshop
-    /// </summary>
     public class Producto
-#pragma warning restore CS0661 
     {
         public static int PrevId;
         string descripcion;
         int id;
+<<<<<<< HEAD
         double precio;
         int cantidad;
 
@@ -60,6 +56,8 @@ namespace Entidades
                 this.descripcion = value;
             }
         }
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
         public int Id
         {
             get
@@ -71,21 +69,9 @@ namespace Entidades
                 this.id = value;
             }
         }
-        public double Precio
-        {
-            get { return this.precio; }
-            set { this.precio = value; }
-        }
-        public int Cantidad
-        {
-            get { return this.cantidad; }
-            set { this.cantidad = value; }
-        }
-
         static Producto()
         {
             PrevId = 0;
-            ListaProductos = new List<Producto>();
         }
 
 
@@ -112,6 +98,7 @@ namespace Entidades
             return altaOk;
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Constructor de la clase producto, asigna sus valores de tipo, precio y cantidad, no se puede inicializar un producto sin estos datos
         /// </summary>
@@ -136,62 +123,43 @@ namespace Entidades
         /// <param name="Producto">producto a ser cargado</param>
         /// <returns>devuelve true si fue exitoso, false si no lo fue</returns>
         public static bool operator +(List<Producto> listaProductos, Producto Producto)
+=======
+        public Producto(ETipoProducto tipo)
         {
-            bool altaOk = false;
-            foreach (Producto clt in listaProductos)
-            {
-                if (clt == Producto)
-                {
-                    return false;
-                }
-            }
-            listaProductos.Add(Producto);
-            altaOk = true;
-            return altaOk;
-        }
-        /// <summary>
-        /// Sobrecarga del metodo - para eliminar una carga de producto del listado de productos
-        /// </summary>
-        /// <param name="listaProductos">listado de productos</param>
-        /// <param name="Producto">producto a ser eliminado</param>
-        /// <returns>devuelve true si fue exitoso, false si no lo fue</returns>
-        public static bool operator -(List<Producto> listaProductos, Producto Producto)
-        {
-            bool removeOk = false;
-            foreach (Producto clt in listaProductos)
-            {
-                if (clt == Producto)
-                {
-                    listaProductos.Remove(clt);
-                    return true;
-                }
-            }
-            return removeOk;
+            this.Id = ++PrevId;
+            PrevId = this.Id;
+            this.tipoProducto = tipo;
         }
 
-        /// <summary>
-        /// Compara dos productos por sus ids
-        /// </summary>
-        /// <param name="Producto1">primer producto a ser evaluado</param>
-        /// <param name="Producto2">segundo producto a ser evaluado</param>
-        /// <returns>devuelve true si son iguales, false si no lo son</returns>
-        public static bool operator ==(Producto Producto1, Producto Producto2)
+        public static List<Producto> operator +(List<Producto> productos, Producto producto)
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
         {
-            if (Producto1.Id == Producto2.Id)
+            if (!(productos is null) && !(producto is null))
             {
-                return true;
+                foreach (Producto p in productos)
+                {
+                    if (p == producto)
+                        return productos;
+                }
+                productos.Add(producto);
             }
-            return false;
+
+            return productos;
         }
-        /// <summary>
-        /// Diferencia dos productos por sus ids
-        /// </summary>
-        /// <param name="Producto1">primer producto a ser evaluado</param>
-        /// <param name="Producto2">segundo producto a ser evaluado</param>
-        /// <returns>devuelve true si son diferentes, false si no lo son</returns>
-        public static bool operator !=(Producto Producto1, Producto Producto2)
+        public static List<Producto> operator -(List<Producto> productos, Producto producto)
         {
-            return !(Producto1 == Producto2);
+            if (!(productos is null) && !(producto is null))
+            {
+                foreach (Producto p in productos)
+                {
+                    if (p == producto)
+                    {
+                        productos.Remove(p);
+                        break;
+                    }
+                }
+            }
+            return productos;
         }
         #endregion
     }

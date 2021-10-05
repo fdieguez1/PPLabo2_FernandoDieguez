@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Cliente
+namespace PetShopForms.Vistas.Venta
 {
     partial class Editar
     {

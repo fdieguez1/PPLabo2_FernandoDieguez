@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Productos
+namespace PetShopForms.Vistas.Producto
 {
     partial class Listado
     {
@@ -29,13 +29,15 @@ namespace PetShopForms.Vistas.Productos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.Designer.cs
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.Designer.cs
             this.SuspendLayout();
             // 
             // label1
@@ -43,6 +45,7 @@ namespace PetShopForms.Vistas.Productos
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.Designer.cs
             this.label1.Size = new System.Drawing.Size(509, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Listado de Productos";
@@ -115,23 +118,35 @@ namespace PetShopForms.Vistas.Productos
             this.dgvProductos.Size = new System.Drawing.Size(509, 327);
             this.dgvProductos.TabIndex = 5;
             // 
+=======
+            this.label1.Size = new System.Drawing.Size(800, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Listado de Productos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.Designer.cs
             // Listado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.Designer.cs
             this.ClientSize = new System.Drawing.Size(529, 420);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.Designer.cs
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Listado";
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.Designer.cs
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.Designer.cs
             this.Text = "Listado";
-            this.Load += new System.EventHandler(this.Listado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,9 +154,12 @@ namespace PetShopForms.Vistas.Productos
         #endregion
 
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.Designer.cs
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvProductos;
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.Designer.cs
     }
 }

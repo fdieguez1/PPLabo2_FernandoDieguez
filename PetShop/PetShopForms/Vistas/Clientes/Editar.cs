@@ -1,6 +1,4 @@
-﻿using Entidades;
-using PetShopForms.Vistas.Persona;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Clientes
+namespace PetShopForms.Vistas.Cliente
 {
     public partial class Editar : Form
     {
-        public PersonaData PersonaDataForm;
-        public Cliente selectedCliente;
-        public Editar(int clienteId)
+        public Editar()
         {
             InitializeComponent();
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Editar.cs
             foreach (Cliente clt in Empleado.ListaClientes)
             {
                 if (clt.Id == clienteId)
@@ -79,6 +76,8 @@ namespace PetShopForms.Vistas.Clientes
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Cliente/Editar.cs
         }
     }
 }

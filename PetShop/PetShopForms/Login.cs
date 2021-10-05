@@ -34,6 +34,7 @@ namespace PetShopForms
                                       "Error",
                                       MessageBoxButtons.OK);
             }
+<<<<<<< HEAD
             bool testClientesOk = Cliente.CrearClientesPrueba();
             if (!testClientesOk)
             {
@@ -55,6 +56,8 @@ namespace PetShopForms
                                       "Error",
                                       MessageBoxButtons.OK);
             }
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

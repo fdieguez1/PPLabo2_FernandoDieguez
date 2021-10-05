@@ -129,8 +129,11 @@ namespace PetShopForms.Vistas.Empleados
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.label1);
             this.Name = "Listado";
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Empleados/Listado.Designer.cs
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Empleado/Listado.Designer.cs
             this.Text = "Listado";
             this.Load += new System.EventHandler(this.Listado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();

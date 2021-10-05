@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Clientes
+namespace PetShopForms.Vistas.Cliente
 {
     partial class Listado
     {
@@ -29,13 +29,7 @@ namespace PetShopForms.Vistas.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -44,6 +38,7 @@ namespace PetShopForms.Vistas.Clientes
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.Designer.cs
             this.label1.Size = new System.Drawing.Size(593, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Listado de Clientes";
@@ -119,10 +114,18 @@ namespace PetShopForms.Vistas.Clientes
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+=======
+            this.label1.Size = new System.Drawing.Size(800, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Listado de Clientes";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Cliente/Listado.Designer.cs
             // Listado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Listado.Designer.cs
             this.ClientSize = new System.Drawing.Size(613, 450);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -132,9 +135,12 @@ namespace PetShopForms.Vistas.Clientes
             this.Name = "Listado";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Name = "Listado";
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Cliente/Listado.Designer.cs
             this.Text = "Listado";
-            this.Load += new System.EventHandler(this.Listado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,9 +148,5 @@ namespace PetShopForms.Vistas.Clientes
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
     }
 }

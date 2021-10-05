@@ -1,5 +1,4 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Productos
+namespace PetShopForms.Vistas.Producto
 {
     public partial class Listado : Form
     {
@@ -17,6 +16,7 @@ namespace PetShopForms.Vistas.Productos
         {
             InitializeComponent();
         }
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.cs
 
         private void Listado_Load(object sender, EventArgs e)
         {
@@ -96,5 +96,7 @@ namespace PetShopForms.Vistas.Productos
             }
         }
        
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.cs
     }
 }

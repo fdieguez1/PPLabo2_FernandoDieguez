@@ -1,6 +1,10 @@
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Ventas/VentaDataForm.cs
 ﻿using Entidades;
 using Entidades.Enums;
 using System;
+=======
+﻿using System;
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Clientes/Eliminar.cs
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +14,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Ventas
+namespace PetShopForms.Vistas.Cliente
 {
-    public partial class VentaDataForm : Form
+    public partial class Eliminar : Form
     {
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Ventas/VentaDataForm.cs
         double cantidad;
         public double Cantidad
         {
@@ -44,6 +49,11 @@ namespace PetShopForms.Vistas.Ventas
                                          MessageBoxButtons.OK);
                 }
             }
+=======
+        public Eliminar()
+        {
+            InitializeComponent();
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Clientes/Eliminar.cs
         }
     }
 }

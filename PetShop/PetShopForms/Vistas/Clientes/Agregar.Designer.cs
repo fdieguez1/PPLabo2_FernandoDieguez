@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Clientes
+namespace PetShopForms.Vistas.Cliente
 {
     partial class Agregar
     {
@@ -29,6 +29,7 @@ namespace PetShopForms.Vistas.Clientes
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Clientes/Agregar.Designer.cs
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -118,14 +119,14 @@ namespace PetShopForms.Vistas.Clientes
             this.pFullContainer.PerformLayout();
             this.ResumeLayout(false);
 
+=======
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Agregar";
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Cliente/Agregar.Designer.cs
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Panel pFullContainer;
-        private System.Windows.Forms.TextBox txtSaldo;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -10,35 +10,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Empleados
+namespace PetShopForms.Vistas.Empleado
 {
-    public partial class Editar : Form
+    public partial class Delete : Form
     {
         public PersonaData PersonaDataForm;
         public EmpleadoData EmpleadoDataForm;
-        public Empleado selectedEmpleado;
-        public Editar(int empleadoId)
+        public Delete()
         {
             InitializeComponent();
-            foreach (Empleado emp in Administrador.ListaEmpleados)
-            {
-                if (emp.Id == empleadoId)
-                {
-                    selectedEmpleado = emp;
-                }
-            }
         }
 
-        private void Editar_Load(object sender, EventArgs e)
+        private void Agregar_Load(object sender, EventArgs e)
         {
-            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new EmpleadoData());
+            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new Empleado.EmpleadoData());
             PersonaDataForm = (PersonaData)Inicio.AddFormToControl(pFullContainer.Controls, new Persona.PersonaData());
-            EmpleadoDataForm.Sueldo = selectedEmpleado.Sueldo;
-            PersonaDataForm.Nombre = selectedEmpleado.Nombre;
-            PersonaDataForm.Apellido = selectedEmpleado.Apellido;
-            PersonaDataForm.Cuil = selectedEmpleado.Cuil;
-            PersonaDataForm.Usuario= selectedEmpleado.Usuario;
-            PersonaDataForm.Contrasenia= selectedEmpleado.Contrasenia;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -61,15 +47,9 @@ namespace PetShopForms.Vistas.Empleados
             }
             else
             {
-<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Empleados/Editar.cs
-                Empleado auxEmpleado = new Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
-                auxEmpleado.Id = selectedEmpleado.Id;
-                for (int i = 0; i < Administrador.ListaEmpleados.Count; i++)
-=======
                 Entidades.Empleado auxEmpleado = new Entidades.Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
                 bool altaOk = Administrador.ListaEmpleados + auxEmpleado;
                 if (altaOk)
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Empleado/Editar.cs
                 {
                     MessageBox.Show("Alta de empleado exitosa",
                                               "Carga exitosa",

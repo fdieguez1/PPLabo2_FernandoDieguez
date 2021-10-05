@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+<<<<<<< HEAD
     /// <summary>
     /// Clase venta, que establece la relacion entre un cliente y un producto cada vez que el primero realiza una compra del segundo
     /// Su carga esta a cargo del empleado o administrador
     /// </summary>
 #pragma warning disable CS0661
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
     public class Venta
 #pragma warning restore CS0661 
     {
@@ -30,6 +33,7 @@ namespace Entidades
                 this.id = value;
             }
         }
+<<<<<<< HEAD
         public Venta this[int id]
         {
             get
@@ -44,6 +48,9 @@ namespace Entidades
                 return null;
             }
         }
+=======
+
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
         public Producto Producto
         {
             get
@@ -66,6 +73,7 @@ namespace Entidades
                 this.cliente = value;
             }
         }
+<<<<<<< HEAD
         public int Unidades
         {
             get
@@ -235,5 +243,7 @@ namespace Entidades
             return !(venta1 == venta2);
         }
         #endregion
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
     }
 }

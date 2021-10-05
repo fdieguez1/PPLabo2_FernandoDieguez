@@ -1,7 +1,7 @@
 ﻿
 namespace PetShopForms.Vistas.Cliente
 {
-    partial class Editar
+    partial class Eliminar
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace PetShopForms.Vistas.Cliente
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Editar";
+            this.Text = "Eliminar";
         }
 
         #endregion

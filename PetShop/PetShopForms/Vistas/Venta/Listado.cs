@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Cliente
+namespace PetShopForms.Vistas.Venta
 {
-    public partial class Agregar : Form
+    public partial class Listado : Form
     {
-        public Agregar()
+        public Listado()
         {
             InitializeComponent();
         }

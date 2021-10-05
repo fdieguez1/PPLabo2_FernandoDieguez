@@ -16,6 +16,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="Vistas\Administradores\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +24,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Clientes\Editar.cs">
+=======
+    <Compile Update="Vistas\Empleado\Delete.cs">
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Clientes\Listado.cs">
@@ -40,6 +44,7 @@
     <Compile Update="Vistas\Productos\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="Vistas\Productos\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,18 +52,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Productos\ProductData.cs">
+=======
+    <Compile Update="Vistas\Producto\Eliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Ventas\Agregar.cs">
+    <Compile Update="Vistas\Producto\Listado.cs">
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Ventas\Editar.cs">
+    <Compile Update="Vistas\Venta\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Ventas\Listado.cs">
+    <Compile Update="Vistas\Venta\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Ventas\VentaDataForm.cs">
+    <Compile Update="Vistas\Venta\Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Venta\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
