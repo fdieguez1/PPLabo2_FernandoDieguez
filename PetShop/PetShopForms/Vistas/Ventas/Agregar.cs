@@ -15,7 +15,7 @@ namespace PetShopForms.Vistas.Ventas
 {
     public partial class Agregar : Form
     {
-        public VentaDataForm ventaDataForm;
+        public VentaData ventaDataForm;
         public Agregar()
         {
             InitializeComponent();
@@ -23,12 +23,12 @@ namespace PetShopForms.Vistas.Ventas
 
         private void Agregar_Load(object sender, EventArgs e)
         {
-            VentaDataForm newMDIChild = new VentaDataForm();
-            this.IsMdiContainer = true;
-            newMDIChild.Dock = DockStyle.Fill;
-            newMDIChild.MdiParent = this;
-            newMDIChild.Show();
-            //ventaDataForm = (VentaDataForm)Inicio.AddFormToControl(pFullContainer.Controls, new VentaDataForm());
+            //VentaDataForm newMDIChild = new VentaDataForm();
+            //this.IsMdiContainer = true;
+            //newMDIChild.Dock = DockStyle.Fill;
+            //newMDIChild.MdiParent = this;
+            //newMDIChild.Show();
+            ventaDataForm = (VentaData)Inicio.AddFormToControl(pFullContainer.Controls, new VentaData());
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
