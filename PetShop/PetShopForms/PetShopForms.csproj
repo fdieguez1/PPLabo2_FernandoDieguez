@@ -16,34 +16,37 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Vistas\Cliente\Agregar.cs">
+    <Compile Update="Vistas\Administradores\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Cliente\Editar.cs">
+    <Compile Update="Vistas\Clientes\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Cliente\Listado.cs">
+    <Compile Update="Vistas\Clientes\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Editar.cs">
+    <Compile Update="Vistas\Clientes\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Agregar.cs">
+    <Compile Update="Vistas\Empleados\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Listado.cs">
+    <Compile Update="Vistas\Empleados\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Agregar.cs">
+    <Compile Update="Vistas\Empleados\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Editar.cs">
+    <Compile Update="Vistas\Productos\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Listado.cs">
+    <Compile Update="Vistas\Productos\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\ProductData.cs">
+    <Compile Update="Vistas\Productos\Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\Productos\ProductData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Ventas\Agregar.cs">

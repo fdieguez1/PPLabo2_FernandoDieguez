@@ -40,6 +40,7 @@ namespace PetShopForms
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
             this.lblWelcome.Font = new System.Drawing.Font("Roboto Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblWelcome.Location = new System.Drawing.Point(12, 16);
             this.lblWelcome.Name = "lblWelcome";
@@ -50,6 +51,7 @@ namespace PetShopForms
             // lblUserType
             // 
             this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserType.BackColor = System.Drawing.Color.Transparent;
             this.lblUserType.Location = new System.Drawing.Point(630, 20);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(177, 14);
@@ -62,11 +64,11 @@ namespace PetShopForms
             this.pRenderBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pRenderBody.BackColor = System.Drawing.Color.White;
+            this.pRenderBody.BackColor = System.Drawing.Color.Transparent;
             this.pRenderBody.ForeColor = System.Drawing.Color.Black;
-            this.pRenderBody.Location = new System.Drawing.Point(152, 52);
+            this.pRenderBody.Location = new System.Drawing.Point(152, 124);
             this.pRenderBody.Name = "pRenderBody";
-            this.pRenderBody.Size = new System.Drawing.Size(685, 401);
+            this.pRenderBody.Size = new System.Drawing.Size(685, 484);
             this.pRenderBody.TabIndex = 8;
             // 
             // pMenu
@@ -76,9 +78,9 @@ namespace PetShopForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pMenu.AutoSize = true;
             this.pMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pMenu.Location = new System.Drawing.Point(12, 52);
+            this.pMenu.Location = new System.Drawing.Point(12, 124);
             this.pMenu.Name = "pMenu";
-            this.pMenu.Size = new System.Drawing.Size(134, 401);
+            this.pMenu.Size = new System.Drawing.Size(134, 484);
             this.pMenu.TabIndex = 9;
             // 
             // btnClose
@@ -101,7 +103,8 @@ namespace PetShopForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(849, 465);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(849, 620);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pRenderBody);

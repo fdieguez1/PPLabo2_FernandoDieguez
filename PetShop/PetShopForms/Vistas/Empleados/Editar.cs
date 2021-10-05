@@ -10,48 +10,50 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Clientes
+namespace PetShopForms.Vistas.Empleados
 {
     public partial class Editar : Form
     {
         public PersonaData PersonaDataForm;
-        public Cliente selectedCliente;
-        public Editar(int clienteId)
+        public EmpleadoData EmpleadoDataForm;
+        public Empleado selectedEmpleado;
+        public Editar(int empleadoId)
         {
             InitializeComponent();
-            foreach (Cliente clt in Entidades.Empleado.ListaClientes)
+            foreach (Empleado emp in Administrador.ListaEmpleados)
             {
-                if (clt.Id == clienteId)
+                if (emp.Id == empleadoId)
                 {
-                    selectedCliente = clt;
+                    selectedEmpleado = emp;
                 }
             }
         }
 
         private void Editar_Load(object sender, EventArgs e)
         {
+            EmpleadoDataForm = (EmpleadoData)Inicio.AddFormToControl(pFullContainer.Controls, new EmpleadoData());
             PersonaDataForm = (PersonaData)Inicio.AddFormToControl(pFullContainer.Controls, new Persona.PersonaData());
-            this.txtSaldo.Text = selectedCliente.Saldo.ToString();
-            PersonaDataForm.Nombre = selectedCliente.Nombre;
-            PersonaDataForm.Apellido = selectedCliente.Apellido;
-            PersonaDataForm.Cuil = selectedCliente.Cuil;
-            PersonaDataForm.Usuario= selectedCliente.Usuario;
-            PersonaDataForm.Contrasenia= selectedCliente.Contrasenia;
+            EmpleadoDataForm.Sueldo = selectedEmpleado.Sueldo;
+            PersonaDataForm.Nombre = selectedEmpleado.Nombre;
+            PersonaDataForm.Apellido = selectedEmpleado.Apellido;
+            PersonaDataForm.Cuil = selectedEmpleado.Cuil;
+            PersonaDataForm.Usuario= selectedEmpleado.Usuario;
+            PersonaDataForm.Contrasenia= selectedEmpleado.Contrasenia;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
             string usuario, contrasenia, nombre, apellido;
-            double saldo, cuil;
+            double sueldo, cuil;
 
             usuario = PersonaDataForm.Usuario;
             contrasenia = PersonaDataForm.Contrasenia;
             cuil = PersonaDataForm.Cuil;
             nombre = PersonaDataForm.Nombre;
             apellido = PersonaDataForm.Apellido;
-            saldo = double.Parse(txtSaldo.Text);
+            sueldo = EmpleadoDataForm.Sueldo;
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasenia) || cuil < 1
-                || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || saldo < 1)
+                || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || sueldo < 1)
             {
                 MessageBox.Show("Todos los campos son requeridos",
                                       "Error",
@@ -59,13 +61,13 @@ namespace PetShopForms.Vistas.Clientes
             }
             else
             {
-                Cliente  auxCliente = new Cliente(nombre, apellido, usuario, contrasenia, saldo, cuil);
-                auxCliente.Id = selectedCliente.Id;
-                for (int i = 0; i < Entidades.Empleado.ListaClientes.Count; i++)
+                Empleado auxEmpleado = new Empleado(nombre, apellido, usuario, contrasenia, cuil, sueldo);
+                auxEmpleado.Id = selectedEmpleado.Id;
+                for (int i = 0; i < Administrador.ListaEmpleados.Count; i++)
                 {
-                    if (Entidades.Empleado.ListaClientes[i] == selectedCliente)
+                    if (Administrador.ListaEmpleados[i] == selectedEmpleado)
                     {
-                        Entidades.Empleado.ListaClientes[i] = auxCliente;
+                        Administrador.ListaEmpleados[i] = auxEmpleado;
                         MessageBox.Show("Empleado editado con exito",
                                     "Operacion exitosa",
                                     MessageBoxButtons.OK);

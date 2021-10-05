@@ -80,12 +80,7 @@ namespace PetShopForms
         public void ChangeBody(Form formToUse)
         {
             pRenderBody.Controls.Clear();
-            formToUse.Dock = DockStyle.Fill;
-            formToUse.TopLevel = false;
-            formToUse.TopMost = true;
-            formToUse.FormBorderStyle = FormBorderStyle.None;
-            pRenderBody.Controls.Add(formToUse);
-            formToUse.Show();
+            AddFormToControl(pRenderBody.Controls, formToUse);
         }
 
         /// <summary>
@@ -95,9 +90,14 @@ namespace PetShopForms
         /// <param name="e"></param>
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Persona.UsuarioLogueado = null;
-            this.Login.Show();
-            this.Close();
+            if (MessageBox.Show("Seguro que desea cerrar su sesion?",
+                                    "Confirmacion",
+                                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Persona.UsuarioLogueado = null;
+                this.Login.Show();
+                this.Close();
+            }
         }
        
     }

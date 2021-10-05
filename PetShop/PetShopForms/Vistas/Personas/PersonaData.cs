@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,16 +73,18 @@ namespace PetShopForms.Vistas.Persona
 
         private void txtCuil_TextChanged(object sender, EventArgs e)
         {
-            double auxDouble;
-            if (double.TryParse(txtCuil.Text, out auxDouble))
+            if (this.txtCuil.Text.Length > 0)
             {
-                this.Cuil = auxDouble;
+                if (Validaciones.ValidarDouble(this.txtCuil.Text))
+                    this.Cuil = int.Parse(this.txtCuil.Text);
+                else
+                {
+                    this.txtCuil.Text = string.Empty;
+                    MessageBox.Show("Solo estan permitidos numeros",
+                                         "Error",
+                                         MessageBoxButtons.OK);
+                }
             }
-            else
-            {
-                txtCuil.Text.Remove(0, txtCuil.Text.Length);
-            }
-
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)

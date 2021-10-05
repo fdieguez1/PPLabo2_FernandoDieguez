@@ -1,7 +1,7 @@
 ﻿
-namespace PetShopForms.Vistas.Empleado
+namespace PetShopForms.Vistas.Empleados
 {
-    partial class Editar
+    partial class Agregar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PetShopForms.Vistas.Empleado
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
             this.pFullContainer = new System.Windows.Forms.Panel();
@@ -74,7 +74,7 @@ namespace PetShopForms.Vistas.Empleado
             this.pFullContainer.Size = new System.Drawing.Size(341, 398);
             this.pFullContainer.TabIndex = 2;
             // 
-            // Editar
+            // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,10 +84,12 @@ namespace PetShopForms.Vistas.Empleado
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Editar";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editar empleado";
-            this.Load += new System.EventHandler(this.Editar_Load);
+            this.Text = "Agregar empleado";
+            this.Load += new System.EventHandler(this.Agregar_Load);
             this.ResumeLayout(false);
 
         }

@@ -42,9 +42,11 @@ namespace PetShopForms.Vistas.Productos
             ETipoProducto tipoProd;
             double precio;
             int cantidad;
+            string descripcion;
             cantidad = ProductDataForm.Cantidad;
             tipoProd = ProductDataForm.TipoProd;
             precio = ProductDataForm.Precio;
+            descripcion = ProductDataForm.Descripcion;
 
             if (precio < 1 || cantidad < 1)
             {
@@ -54,7 +56,7 @@ namespace PetShopForms.Vistas.Productos
             }
             else
             {
-                Producto auxProducto = new Producto(tipoProd, precio, cantidad);
+                Producto auxProducto = new Producto(descripcion, tipoProd, precio, cantidad);
                 auxProducto.Id = selectedProduct.Id;
                 for (int i = 0; i < Producto.ListaProductos.Count; i++)
                 {

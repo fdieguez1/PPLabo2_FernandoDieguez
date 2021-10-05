@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Empleado
+namespace PetShopForms.Vistas.Clientes
 {
     partial class Agregar
     {
@@ -33,6 +33,9 @@ namespace PetShopForms.Vistas.Empleado
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
             this.pFullContainer = new System.Windows.Forms.Panel();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pFullContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -69,10 +72,31 @@ namespace PetShopForms.Vistas.Empleado
             // 
             // pFullContainer
             // 
+            this.pFullContainer.Controls.Add(this.txtSaldo);
+            this.pFullContainer.Controls.Add(this.label1);
             this.pFullContainer.Location = new System.Drawing.Point(12, 17);
             this.pFullContainer.Name = "pFullContainer";
             this.pFullContainer.Size = new System.Drawing.Size(341, 398);
             this.pFullContainer.TabIndex = 2;
+            this.pFullContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pFullContainer_Paint);
+            // 
+            // txtSaldo
+            // 
+            this.txtSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSaldo.Location = new System.Drawing.Point(4, 331);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(334, 23);
+            this.txtSaldo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 312);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Saldo";
             // 
             // Agregar
             // 
@@ -88,8 +112,10 @@ namespace PetShopForms.Vistas.Empleado
             this.MinimizeBox = false;
             this.Name = "Agregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar empleado";
+            this.Text = "Agregar cliente";
             this.Load += new System.EventHandler(this.Agregar_Load);
+            this.pFullContainer.ResumeLayout(false);
+            this.pFullContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -99,5 +125,7 @@ namespace PetShopForms.Vistas.Empleado
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Panel pFullContainer;
+        private System.Windows.Forms.TextBox txtSaldo;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -23,7 +23,7 @@ namespace Entidades
         static Empleado()
         {
             ListaClientes = new List<Cliente>();
-            CantidadMaximaClientes = 10;
+            CantidadMaximaClientes = 20;
         }
 
         double sueldo;
@@ -55,9 +55,21 @@ namespace Entidades
         /// </summary>
         /// <param name="cliente">cliente que realiza la compra</param>
         /// <param name="producto">producto vendido</param>
-        protected void Vender(Cliente cliente, Producto producto)
+        /// <returns>devuelve true si logro la venta, false si fallo</returns>
+        protected bool Vender(Producto producto, Cliente cliente, int unidades)
         {
-            //ToDo
+            Venta auxVenta = new Venta(producto, cliente, unidades);
+            bool altaOk = false;
+            if (cliente.Saldo >= producto.Precio && producto.Cantidad > 0)
+            {
+                cliente.Saldo -= producto.Precio;
+                if (producto.Cantidad > unidades)
+                {
+                    altaOk = Venta.ListaVentas + auxVenta;
+                    producto.Cantidad -= unidades;
+                }
+            }
+            return altaOk;
         }
 
         /// <summary>
@@ -96,18 +108,15 @@ namespace Entidades
         public static bool operator +(List<Empleado> listaEmpleados, Empleado empleado)
         {
             bool altaOk = false;
-            if (Administrador.CantidadMaximaEmpleados > listaEmpleados.Count)
+            foreach (Empleado empl in listaEmpleados)
             {
-                foreach (Empleado empl in listaEmpleados)
+                if (empl == empleado)
                 {
-                    if (empl == empleado)
-                    {
-                        return false;
-                    }
+                    return false;
                 }
-                listaEmpleados.Add(empleado);
-                altaOk = true;
             }
+            listaEmpleados.Add(empleado);
+            altaOk = true;
             return altaOk;
         }
         /// <summary>

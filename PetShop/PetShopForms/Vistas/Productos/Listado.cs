@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Empleado
+namespace PetShopForms.Vistas.Productos
 {
     public partial class Listado : Form
     {
@@ -20,7 +20,7 @@ namespace PetShopForms.Vistas.Empleado
 
         private void Listado_Load(object sender, EventArgs e)
         {
-            CargarEmpleados();
+            CargarProductos();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -29,32 +29,32 @@ namespace PetShopForms.Vistas.Empleado
             DialogResult dialogRes = form.ShowDialog();
             if (dialogRes != DialogResult.None)
             {
-                CargarEmpleados();
+                CargarProductos();
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (this.dgvEmpleados.SelectedCells.Count > 0)
+            if (dgvProductos.SelectedCells.Count > 0)
             {
-                int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
-                int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
+                int selectedRowIndex = this.dgvProductos.SelectedCells[0].RowIndex;
+                int selectedId = (int)dgvProductos.Rows[selectedRowIndex].Cells["Id"].Value;
                 Form form = new Editar(selectedId);
                 DialogResult dialogRes = form.ShowDialog();
                 if (dialogRes != DialogResult.None)
                 {
-                    CargarEmpleados();
+                    CargarProductos();
                 }
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.dgvEmpleados.SelectedCells.Count > 0)
+            if (dgvProductos.SelectedCells.Count > 0)
             {
-                int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
-                int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
-                if (MessageBox.Show($"Seguro que desea eliminar el empleado de id: {selectedId}?",
+                int selectedRowIndex = this.dgvProductos.SelectedCells[0].RowIndex;
+                int selectedId = (int)dgvProductos.Rows[selectedRowIndex].Cells["Id"].Value;
+                if (MessageBox.Show($"Seguro que desea eliminar el cliente de id: {selectedId}?",
                                          "Confirmacion",
                                          MessageBoxButtons.YesNo) == DialogResult.No)
                 {
@@ -62,11 +62,11 @@ namespace PetShopForms.Vistas.Empleado
                 }
                 else
                 {
-                    foreach (Entidades.Empleado emp in Administrador.ListaEmpleados)
+                    foreach (Cliente clt in Empleado.ListaClientes)
                     {
-                        if (emp.Id == selectedId)
+                        if (clt.Id == selectedId)
                         {
-                            if (Administrador.ListaEmpleados - emp)
+                            if (Empleado.ListaClientes - clt)
                             {
                                 MessageBox.Show("Empleado eliminado",
                                          "Operacion exitosa",
@@ -83,17 +83,18 @@ namespace PetShopForms.Vistas.Empleado
                             }
                         }
                     }
-                    CargarEmpleados();
+                    CargarProductos();
                 }
             }
         }
 
-        void CargarEmpleados()
+        void CargarProductos()
         {
-            if (Entidades.Administrador.ListaEmpleados.Count > 0)
+            if (Producto.ListaProductos.Count > 0)
             {
-                dgvEmpleados.DataSource = new List<Entidades.Empleado>(Administrador.ListaEmpleados);
+                dgvProductos.DataSource = new List<Entidades.Producto>(Producto.ListaProductos);
             }
         }
+       
     }
 }
