@@ -6,40 +6,44 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-<<<<<<< HEAD
     /// <summary>
     /// Clase venta, que establece la relacion entre un cliente y un producto cada vez que el primero realiza una compra del segundo
     /// Su carga esta a cargo del empleado o administrador
     /// </summary>
-<<<<<<< HEAD
 #pragma warning disable CS0661
-=======
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
-=======
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
     public class Venta
+#pragma warning restore CS0661 
     {
+        public static int PrevId;
+        int id;
         Producto producto;
         Cliente cliente;
-
-        static List<Venta> listaVentas;
-        public static List<Venta> ListaVentas
+        int unidades;
+        public int Id
         {
-            get { return listaVentas; }
-            set { listaVentas = value; }
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id = value;
+            }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         public Venta this[int id]
-=======
-        static Venta()
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
         {
-            ListaVentas = new List<Venta>();
+            get
+            {
+                foreach (Venta vent in ListaVentas)
+                {
+                    if (vent.id == id)
+                    {
+                        return vent;
+                    }
+                }
+                return null;
+            }
         }
-=======
-
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
         public Producto Producto
         {
             get
@@ -62,8 +66,6 @@ namespace Entidades
                 this.cliente = value;
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         public int Unidades
         {
             get
@@ -75,29 +77,80 @@ namespace Entidades
                 this.unidades = value;
             }
         }
-=======
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
 
-      
-
-        public Venta(Producto producto, Cliente cliente)
+        static List<Venta> listaVentas;
+        public static List<Venta> ListaVentas
         {
+            get { return listaVentas; }
+            set { listaVentas = value; }
+        }
+        static Venta()
+        {
+            PrevId = 0;
+            ListaVentas = new List<Venta>();
+        }
+
+        public Venta(Producto producto, Cliente cliente, int unidades)
+        {
+            this.Id = ++PrevId;
+            PrevId = this.Id;
             this.Producto = producto;
             this.Cliente = cliente;
-
+            this.Unidades = unidades;
         }
-
-        public bool Vender(Producto producto, Cliente cliente)
+        /// <summary>
+        /// Devuelve una lista de ventas, filtrando solo del tipo Venta
+        /// </summary>
+        /// <returns></returns>
+        public static List<object> ListarVentas()
         {
-            if (cliente.Saldo >= producto.precio && producto.cantidad > 0)
+            List<object> ventasDisplay = new List<object>();
+            foreach (object emp in ListaVentas)
             {
-                cliente.Saldo -= producto.precio;
-                producto.cantidad--;
-                return true;
+                Venta venta = (Venta)emp;
+                ventasDisplay.Add(new {  
+                    Id = venta.id,
+                    Cliente = venta.Cliente.Usuario,
+                    Producto = venta.Producto.Descripcion,
+                    Cantidad = venta.Producto.Cantidad,
+                    TotalAPagar = venta.TotalApagar()
+                });
             }
-            return false;
+            return ventasDisplay;
         }
 
+        /// <summary>
+        /// Devuelve el total a pagar de una venta
+        /// </summary>
+        /// <returns>double total a pagar por el cliente</returns>
+        public double TotalApagar()
+        {
+            return this.Producto.Precio * this.Unidades;
+        }
+        /// <summary>
+        /// Carga de prueba de ventas hardcodeados
+        /// </summary>
+        /// <returns>devuelve true si logro la carga, false si no la logro</returns>
+        public static bool CrearVentaPrueba()
+        {
+            bool altaOk = false;
+            Random rnd = new Random();
+            int testCount = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                testCount++;
+                int salary = rnd.Next(10000, 100000);
+                Venta newVenta = new Venta(Producto.ListaProductos[rnd.Next(0, Producto.ListaProductos.Count)], Empleado.ListaClientes[rnd.Next(0, Empleado.ListaClientes.Count)], rnd.Next(1,2));
+                altaOk = ListaVentas + newVenta;
+                if (!altaOk)
+                {
+                    break;
+                }
+            }
+            return altaOk;
+        }
+        #region sobrecargas
+        
         public string Mostrar()
         {
             return (string)this;
@@ -109,11 +162,10 @@ namespace Entidades
 
             sb.AppendLine($"{vnt.Cliente}\r");
             sb.AppendLine($"{vnt.Producto}\r");
-            sb.AppendLine($"Total a pagar: {vnt.Producto.cantidad * vnt.Producto.precio}\r");
+            sb.AppendLine($"Total a pagar: {vnt.Producto.Cantidad * vnt.Producto.Precio}\r");
 
             return sb.ToString();
         }
-<<<<<<< HEAD
         
         
 
@@ -183,9 +235,5 @@ namespace Entidades
             return !(venta1 == venta2);
         }
         #endregion
-=======
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
-=======
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
     }
 }

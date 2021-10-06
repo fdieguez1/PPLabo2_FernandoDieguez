@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Ventas
+namespace PetShopForms.Vistas.Productos
 {
     public partial class Listado : Form
     {
@@ -20,7 +20,7 @@ namespace PetShopForms.Vistas.Ventas
 
         private void Listado_Load(object sender, EventArgs e)
         {
-            CargarVentas();
+            CargarProductos();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace PetShopForms.Vistas.Ventas
             DialogResult dialogRes = form.ShowDialog();
             if (dialogRes != DialogResult.None)
             {
-                CargarVentas();
+                CargarProductos();
             }
         }
 
@@ -43,7 +43,7 @@ namespace PetShopForms.Vistas.Ventas
                 DialogResult dialogRes = form.ShowDialog();
                 if (dialogRes != DialogResult.None)
                 {
-                    CargarVentas();
+                    CargarProductos();
                 }
             }
         }
@@ -83,16 +83,16 @@ namespace PetShopForms.Vistas.Ventas
                             }
                         }
                     }
-                    CargarVentas();
+                    CargarProductos();
                 }
             }
         }
 
-        void CargarVentas()
+        void CargarProductos()
         {
-            if (Venta.ListaVentas.Count > 0)
+            if (Producto.ListaProductos.Count > 0)
             {
-                dgvProductos.DataSource = Venta.ListarVentas();
+                dgvProductos.DataSource = new List<Entidades.Producto>(Producto.ListaProductos);
             }
         }
        

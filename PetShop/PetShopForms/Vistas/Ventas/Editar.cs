@@ -1,6 +1,6 @@
 ﻿using Entidades;
 using Entidades.Enums;
-using PetShopForms.Vistas.Ventas;
+using PetShopForms.Vistas.Productos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ namespace PetShopForms.Vistas.Ventas
 {
     public partial class Editar : Form
     {
-        public VentaData ProductDataForm;
+        public VentaDataForm ProductDataForm;
         public Producto selectedProduct;
         public Editar(int productId)
         {

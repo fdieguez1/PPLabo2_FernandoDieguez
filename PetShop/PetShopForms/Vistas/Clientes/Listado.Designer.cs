@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Ventas
+namespace PetShopForms.Vistas.Clientes
 {
     partial class Listado
     {
@@ -31,35 +31,36 @@ namespace PetShopForms.Vistas.Ventas
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(535, 40);
+            this.label1.Size = new System.Drawing.Size(593, 43);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Listado de Ventas";
+            this.label1.Text = "Listado de Clientes";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvProductos
+            // dgvClientes
             // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AllowUserToDeleteRows = false;
-            this.dgvProductos.AllowUserToOrderColumns = true;
-            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AllowUserToOrderColumns = true;
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -68,22 +69,23 @@ namespace PetShopForms.Vistas.Ventas
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductos.Location = new System.Drawing.Point(0, 70);
-            this.dgvProductos.MultiSelect = false;
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.RowTemplate.Height = 25;
-            this.dgvProductos.Size = new System.Drawing.Size(535, 350);
-            this.dgvProductos.TabIndex = 1;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.Location = new System.Drawing.Point(10, 85);
+            this.dgvClientes.MultiSelect = false;
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.RowTemplate.Height = 25;
+            this.dgvClientes.Size = new System.Drawing.Size(593, 352);
+            this.dgvClientes.TabIndex = 1;
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(0, 43);
+            this.btnAdd.Location = new System.Drawing.Point(10, 47);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 21);
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "+ Agregar";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -93,10 +95,11 @@ namespace PetShopForms.Vistas.Ventas
             // 
             this.btnEdit.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(81, 43);
+            this.btnEdit.Location = new System.Drawing.Point(91, 47);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 21);
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -106,10 +109,11 @@ namespace PetShopForms.Vistas.Ventas
             // 
             this.btnDelete.BackColor = System.Drawing.Color.SlateBlue;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(162, 43);
+            this.btnDelete.Location = new System.Drawing.Point(172, 47);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 21);
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -117,19 +121,20 @@ namespace PetShopForms.Vistas.Ventas
             // 
             // Listado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 420);
+            this.ClientSize = new System.Drawing.Size(613, 450);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dgvProductos);
+            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Listado";
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
             this.Load += new System.EventHandler(this.Listado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,7 +142,7 @@ namespace PetShopForms.Vistas.Ventas
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;

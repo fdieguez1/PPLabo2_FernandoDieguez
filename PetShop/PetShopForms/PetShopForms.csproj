@@ -16,44 +16,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Inicio.resx</DependentUpon>
+    </Compile>
     <Compile Update="Vistas\Administradores\Listado.cs">
-=======
-    <Compile Update="Vistas\Cliente\Agregar.cs">
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Cliente\Editar.cs">
+    <Compile Update="Vistas\Clientes\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Update="Vistas\Clientes\Editar.cs">
-=======
-    <Compile Update="Vistas\Empleado\Delete.cs">
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
-=======
-    <Compile Update="Vistas\Cliente\Listado.cs">
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Editar.cs">
+    <Compile Update="Vistas\Clientes\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Agregar.cs">
+    <Compile Update="Vistas\Empleados\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Empleado\Listado.cs">
+    <Compile Update="Vistas\Empleados\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Agregar.cs">
+    <Compile Update="Vistas\Empleados\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Editar.cs">
+    <Compile Update="Vistas\Productos\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Update="Vistas\Productos\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,30 +52,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\Productos\ProductData.cs">
-=======
-    <Compile Update="Vistas\Producto\Eliminar.cs">
-=======
-    <Compile Update="Vistas\Producto\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\ProductData.cs">
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
+    <Compile Update="Vistas\Ventas\Agregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Producto\Listado.cs">
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+    <Compile Update="Vistas\Ventas\Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Venta\Agregar.cs">
+    <Compile Update="Vistas\Ventas\Listado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vistas\Venta\Editar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vistas\Venta\Eliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vistas\Venta\Listado.cs">
+    <Compile Update="Vistas\Ventas\VentaDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -93,6 +72,14 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Login.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Inicio.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

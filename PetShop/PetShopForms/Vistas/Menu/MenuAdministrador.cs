@@ -26,31 +26,28 @@ namespace PetShopForms.Vistas.Menu
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            InicioForm.ChangeBody(new Empleado.Listado());
+            InicioForm.ChangeBody(new Empleados.Listado());
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
 
-            InicioForm.ChangeBody(new Cliente.Listado());
-        }
-
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            InicioForm.ChangeBody(new Venta.Listado());
+            InicioForm.ChangeBody(new Clientes.Listado());
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            InicioForm.ChangeBody(new Administradores.Listado());
-=======
-            InicioForm.ChangeBody(new Producto.Listado());
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
-=======
             InicioForm.ChangeBody(new Productos.Listado());
->>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            InicioForm.ChangeBody(new Ventas.Listado());
+        }
+
+        private void btnAdministradores_Click(object sender, EventArgs e)
+        {
+            InicioForm.ChangeBody(new Administradores.Listado());
         }
     }
 }
