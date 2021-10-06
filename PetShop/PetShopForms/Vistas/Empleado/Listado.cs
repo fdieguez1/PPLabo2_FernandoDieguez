@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Ventas
+namespace PetShopForms.Vistas.Empleado
 {
     public partial class Listado : Form
     {
@@ -20,7 +20,7 @@ namespace PetShopForms.Vistas.Ventas
 
         private void Listado_Load(object sender, EventArgs e)
         {
-            CargarVentas();
+            CargarEmpleados();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -29,32 +29,32 @@ namespace PetShopForms.Vistas.Ventas
             DialogResult dialogRes = form.ShowDialog();
             if (dialogRes != DialogResult.None)
             {
-                CargarVentas();
+                CargarEmpleados();
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvProductos.SelectedCells.Count > 0)
+            int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
+            int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
+            Form form = new Editar(selectedId);
+            DialogResult dialogRes = form.ShowDialog();
+            if (dialogRes != DialogResult.None)
             {
-                int selectedRowIndex = this.dgvProductos.SelectedCells[0].RowIndex;
-                int selectedId = (int)dgvProductos.Rows[selectedRowIndex].Cells["Id"].Value;
-                Form form = new Editar(selectedId);
-                DialogResult dialogRes = form.ShowDialog();
-                if (dialogRes != DialogResult.None)
-                {
-                    CargarVentas();
-                }
+                CargarEmpleados();
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvProductos.SelectedCells.Count > 0)
+            Form form = new Delete();
+            DialogResult dialogRes = form.ShowDialog();
+            if (dialogRes != DialogResult.None)
             {
-                int selectedRowIndex = this.dgvProductos.SelectedCells[0].RowIndex;
-                int selectedId = (int)dgvProductos.Rows[selectedRowIndex].Cells["Id"].Value;
-                if (MessageBox.Show($"Seguro que desea eliminar el cliente de id: {selectedId}?",
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Empleados/Listado.cs
+                int selectedRowIndex = this.dgvEmpleados.SelectedCells[0].RowIndex;
+                int selectedId = (int)dgvEmpleados.Rows[selectedRowIndex].Cells["Id"].Value;
+                if (MessageBox.Show($"Seguro que desea eliminar el empleado de id: {selectedId}?",
                                          "Confirmacion",
                                          MessageBoxButtons.YesNo) == DialogResult.No)
                 {
@@ -62,11 +62,11 @@ namespace PetShopForms.Vistas.Ventas
                 }
                 else
                 {
-                    foreach (Cliente clt in Entidades.Empleado.ListaClientes)
+                    foreach (Entidades.Empleado emp in Administrador.ListaEmpleados)
                     {
-                        if (clt.Id == selectedId)
+                        if (emp.Id == selectedId)
                         {
-                            if (Entidades.Empleado.ListaClientes - clt)
+                            if (Administrador.ListaEmpleados - emp)
                             {
                                 MessageBox.Show("Empleado eliminado",
                                          "Operacion exitosa",
@@ -83,18 +83,24 @@ namespace PetShopForms.Vistas.Ventas
                             }
                         }
                     }
-                    CargarVentas();
+                    CargarEmpleados();
                 }
+=======
+                CargarEmpleados();
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Empleado/Listado.cs
             }
         }
 
-        void CargarVentas()
+        void CargarEmpleados()
         {
-            if (Venta.ListaVentas.Count > 0)
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Empleados/Listado.cs
+            if (Entidades.Administrador.ListaEmpleados.Count > 0)
             {
-                dgvProductos.DataSource = new List<Entidades.Venta>(Venta.ListaVentas);
+                dgvEmpleados.DataSource = new List<Entidades.Empleado>(Administrador.ListaEmpleados);
             }
+=======
+            dgvEmpleados.DataSource = Entidades.Administrador.ListaEmpleados.GetRange(0, Entidades.Administrador.ListaEmpleados.Count);
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Empleado/Listado.cs
         }
-       
     }
 }

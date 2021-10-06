@@ -40,18 +40,25 @@ namespace PetShopForms
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
             this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
             this.lblWelcome.Font = new System.Drawing.Font("Roboto Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblWelcome.Location = new System.Drawing.Point(12, 16);
+=======
+            this.lblWelcome.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.Location = new System.Drawing.Point(12, 8);
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(92, 19);
+            this.lblWelcome.Size = new System.Drawing.Size(94, 19);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Bienvenido, ";
             // 
             // lblUserType
             // 
             this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserType.BackColor = System.Drawing.Color.Transparent;
             this.lblUserType.Location = new System.Drawing.Point(630, 20);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(177, 14);
@@ -64,11 +71,21 @@ namespace PetShopForms
             this.pRenderBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
+<<<<<<< HEAD
             this.pRenderBody.BackColor = System.Drawing.Color.Transparent;
             this.pRenderBody.ForeColor = System.Drawing.Color.Black;
             this.pRenderBody.Location = new System.Drawing.Point(152, 124);
+=======
+            this.pRenderBody.Location = new System.Drawing.Point(152, 52);
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+=======
+            this.pRenderBody.BackColor = System.Drawing.Color.White;
+            this.pRenderBody.ForeColor = System.Drawing.Color.Black;
+            this.pRenderBody.Location = new System.Drawing.Point(152, 52);
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
             this.pRenderBody.Name = "pRenderBody";
-            this.pRenderBody.Size = new System.Drawing.Size(685, 484);
+            this.pRenderBody.Size = new System.Drawing.Size(685, 401);
             this.pRenderBody.TabIndex = 8;
             // 
             // pMenu
@@ -78,9 +95,9 @@ namespace PetShopForms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pMenu.AutoSize = true;
             this.pMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pMenu.Location = new System.Drawing.Point(12, 124);
+            this.pMenu.Location = new System.Drawing.Point(12, 52);
             this.pMenu.Name = "pMenu";
-            this.pMenu.Size = new System.Drawing.Size(134, 484);
+            this.pMenu.Size = new System.Drawing.Size(134, 401);
             this.pMenu.TabIndex = 9;
             // 
             // btnClose
@@ -102,16 +119,25 @@ namespace PetShopForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.Indigo;
+<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(849, 620);
+=======
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(849, 465);
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+=======
+            this.ClientSize = new System.Drawing.Size(849, 465);
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pRenderBody);
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio";

@@ -1,5 +1,5 @@
 ﻿
-namespace PetShopForms.Vistas.Ventas
+namespace PetShopForms.Vistas.Empleado
 {
     partial class Agregar
     {
@@ -73,7 +73,6 @@ namespace PetShopForms.Vistas.Ventas
             this.pFullContainer.Name = "pFullContainer";
             this.pFullContainer.Size = new System.Drawing.Size(341, 398);
             this.pFullContainer.TabIndex = 2;
-            this.pFullContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pFullContainer_Paint);
             // 
             // Agregar
             // 

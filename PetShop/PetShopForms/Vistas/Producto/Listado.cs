@@ -1,5 +1,4 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PetShopForms.Vistas.Ventas
+namespace PetShopForms.Vistas.Producto
 {
     public partial class Listado : Form
     {
@@ -17,10 +16,11 @@ namespace PetShopForms.Vistas.Ventas
         {
             InitializeComponent();
         }
+<<<<<<< HEAD:PetShop/PetShopForms/Vistas/Productos/Listado.cs
 
         private void Listado_Load(object sender, EventArgs e)
         {
-            CargarVentas();
+            CargarProductos();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace PetShopForms.Vistas.Ventas
             DialogResult dialogRes = form.ShowDialog();
             if (dialogRes != DialogResult.None)
             {
-                CargarVentas();
+                CargarProductos();
             }
         }
 
@@ -43,7 +43,7 @@ namespace PetShopForms.Vistas.Ventas
                 DialogResult dialogRes = form.ShowDialog();
                 if (dialogRes != DialogResult.None)
                 {
-                    CargarVentas();
+                    CargarProductos();
                 }
             }
         }
@@ -83,18 +83,20 @@ namespace PetShopForms.Vistas.Ventas
                             }
                         }
                     }
-                    CargarVentas();
+                    CargarProductos();
                 }
             }
         }
 
-        void CargarVentas()
+        void CargarProductos()
         {
-            if (Venta.ListaVentas.Count > 0)
+            if (Producto.ListaProductos.Count > 0)
             {
-                dgvProductos.DataSource = new List<Entidades.Venta>(Venta.ListaVentas);
+                dgvProductos.DataSource = new List<Entidades.Producto>(Producto.ListaProductos);
             }
         }
        
+=======
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones):PetShop/PetShopForms/Vistas/Producto/Listado.cs
     }
 }

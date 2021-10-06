@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 namespace Entidades
 {
 #pragma warning disable CS0661
-    /// <summary>
-    /// Clase empleado, hereda de persona, asignando un salario y es la contenedora de la lista de clientes
-    /// </summary>
     public class Empleado : Persona
 #pragma warning restore CS0661
     {
@@ -23,7 +20,7 @@ namespace Entidades
         static Empleado()
         {
             ListaClientes = new List<Cliente>();
-            CantidadMaximaClientes = 20;
+            CantidadMaximaClientes = 10;
         }
 
         double sueldo;
@@ -36,28 +33,20 @@ namespace Entidades
             }
         }
 
-        /// <summary>
-        /// Constructor de la clase empleado, utiliza el constructor de su clase padre Persona
-        /// </summary>
-        /// <param name="nombre">string nombre a asignar</param>
-        /// <param name="apellido">string apellido a asignar</param>
-        /// <param name="usuario">string usuario a asignar</param>
-        /// <param name="contrasenia">string contraseña a asignar</param>
-        /// <param name="cuil">double numero de cuil a asignar</param>
-        /// <param name="sueldo">double sueldo sueldo a asignar</param>
         public Empleado(string nombre, string apellido, string usuario, string contrasenia, double cuil, double sueldo) : base(nombre, apellido, usuario, contrasenia, cuil)
         {
             this.sueldo = sueldo;
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Dados un cliente y un producto, carga un registro en la lista de ventas
         /// </summary>
         /// <param name="cliente">cliente que realiza la compra</param>
         /// <param name="producto">producto vendido</param>
-        /// <returns>devuelve true si logro la venta, false si fallo</returns>
-        protected bool Vender(Producto producto, Cliente cliente, int unidades)
+        protected void Vender(Cliente cliente, Producto producto)
         {
+<<<<<<< HEAD
             Venta auxVenta = new Venta(producto, cliente, unidades);
             bool altaOk = false;
             if (cliente.Saldo >= producto.Precio && producto.Cantidad > 0)
@@ -70,28 +59,20 @@ namespace Entidades
                 }
             }
             return altaOk;
+=======
+        protected void Vender(Cliente cliente, Producto producto, int cantidad)
+        {
+
+>>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+=======
+            //ToDo
+>>>>>>> parent of 1830c94 (Correccion del parcial, falta solucionar problema en ventas)
         }
 
-        /// <summary>
-        /// Carga de prueba de empleados hardcodeados
-        /// </summary>
-        /// <returns>devuelve true si logro la carga, false si no la logro</returns>
         public static bool CrearEmpleadoPrueba()
         {
-            Empleado auxEmpleado = new Empleado($"Fernando", "Dieguez", "ferdieguez", "utnfra2021", 20111111112, 50000);
+            Empleado auxEmpleado = new Empleado("Fernando", "Dieguez", "ferdieguez", "utnfra2021", 20111111112, 50000);
             bool altaOk = Administrador.ListaEmpleados + auxEmpleado;
-            int testCount = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                testCount++;
-                int salary = new Random().Next(10000, 100000);
-                Empleado newEmp = new Empleado($"NombreTest", $"ApellidoTest", $"User{testCount}", "utnfra2021", 20111111112, salary);
-                altaOk = Administrador.ListaEmpleados + newEmp;
-                if (!altaOk)
-                {
-                    break;
-                }
-            }
             return altaOk;
         }
 
@@ -99,55 +80,24 @@ namespace Entidades
         {
             return this.ToString();
         }
-        /// <summary>
-        /// Sobrecarga del metodo + para cargar un empleado a la lista de empleados
-        /// </summary>
-        /// <param name="listaEmpleados">lista objetivo</param>
-        /// <param name="empleado">empleado a cargar</param>
-        /// <returns></returns>
+
         public static bool operator +(List<Empleado> listaEmpleados, Empleado empleado)
         {
             bool altaOk = false;
-            foreach (Empleado empl in listaEmpleados)
-            {
-                if (empl == empleado)
-                {
-                    return false;
-                }
-            }
-            listaEmpleados.Add(empleado);
-            altaOk = true;
-            return altaOk;
-        }
-        /// <summary>
-        /// Sobrecarga del metodo - para eliminar un empleado de la lista de empleados
-        /// </summary>
-        /// <param name="listaEmpleados">lista objetivo</param>
-        /// <param name="empleado">empleado a eliminar</param>
-        /// <returns>devuelve true si logro eliminarlo, false si no lo logro</returns>
-        public static bool operator -(List<Empleado> listaEmpleados, Empleado empleado)
-        {
-            bool removeOk = false;
             if (Administrador.CantidadMaximaEmpleados > listaEmpleados.Count)
             {
-                foreach (Empleado emp in listaEmpleados)
+                foreach (Empleado empl in listaEmpleados)
                 {
-                    if (emp == empleado)
+                    if (empl == empleado)
                     {
-                        listaEmpleados.Remove(emp);
-                        return true;
+                        return false;
                     }
                 }
-                removeOk = false;
+                listaEmpleados.Add(empleado);
+                altaOk = true;
             }
-            return removeOk;
+            return altaOk;
         }
-        /// <summary>
-        /// Sobrecarga del metodo == para comparar si dos empleados son iguales en sus usuarios
-        /// </summary>
-        /// <param name="empleado1">primer empleado a evaluar</param>
-        /// <param name="empleado2">segundo empleado a evaluar</param>
-        /// <returns>devuelve true si son iguales sus usuarios, false si no lo son</returns>
         public static bool operator ==(Empleado empleado1, Empleado empleado2)
         {
             if (empleado1.Usuario == empleado2.Usuario)
@@ -156,12 +106,6 @@ namespace Entidades
             }
             return false;
         }
-        /// <summary>
-        /// Sobrecar del metodo != para evaluar si dos empleados son distintos en sus usuarios
-        /// </summary>
-        /// <param name="empleado1">primer empleado a evaluar</param>
-        /// <param name="empleado2">segundo empleado a evaluar</param>
-        /// <returns>devuelve true si son distintos sus usuarios, false si no lo son</returns>
         public static bool operator !=(Empleado empleado1, Empleado empleado2)
         {
             return !(empleado1 == empleado2);
