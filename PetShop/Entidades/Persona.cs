@@ -3,9 +3,18 @@ using System.Text;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Clase base desde la que se generaran los usuarios de esta aplicacion. No puede instanciarse
+    /// </summary>
     public abstract class Persona
     {
+        /// <summary>
+        /// Usuario al cual pertenece la sesion iniciada
+        /// </summary>
         public static Persona UsuarioLogueado;
+        /// <summary>
+        /// Id autoincremental
+        /// </summary>
         public static int PrevId;
 
         int id;
@@ -93,11 +102,22 @@ namespace Entidades
                 return $"{this.Nombre} {this.Apellido}";
             }
         }
+        /// <summary>
+        /// Constructor estatico inicializa el conteo de ids autoincrementales la primera vez que se utiliza esta clase
+        /// </summary>
         static Persona()
         {
             PrevId = 0;
         }
 
+        /// <summary>
+        /// Constructor base para cargar los datos basicos de una persona
+        /// </summary>
+        /// <param name="nombre">nombre a asignar</param>
+        /// <param name="apellido">apellido a asignar</param>
+        /// <param name="usuario">usuario a asignar</param>
+        /// <param name="contrasenia">contraseña a asignar</param>
+        /// <param name="cuil">cuil a asignar</param>
         public Persona(string nombre, string apellido, string usuario, string contrasenia, double cuil)
         {
             this.Id = ++PrevId;
@@ -109,6 +129,10 @@ namespace Entidades
             this.Cuil = cuil;
         }
 
+        /// <summary>
+        /// Metodo virtual para poderse sobrecargar, utiliza el stringbuilder para mostrar en dos lineas el contenido de la clase Persona
+        /// </summary>
+        /// <returns>Devuelve la cadena de string con formato</returns>
         public virtual string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -117,6 +141,12 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Dados un usuario y contraseña se busca en la lista de empleados por una coincidencia
+        /// </summary>
+        /// <param name="usuario">string usuario a buscar</param>
+        /// <param name="contrasenia">string contraseña a buscar</param>
+        /// <returns>Devuelve el usuario encontrado si es exitoso, null si no hubo coincidencias</returns>
         public static Persona Login(string usuario, string contrasenia)
         {
             foreach (Persona item in Administrador.ListaEmpleados)

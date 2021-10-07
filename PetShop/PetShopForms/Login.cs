@@ -30,20 +30,31 @@ namespace PetShopForms
             bool testEmpleadoOk = Empleado.CrearEmpleadoPrueba();
             if (!testEmpleadoOk)
             {
-                MessageBox.Show("Problema al cargar empleado mock",
+                MessageBox.Show("Problema al cargar empleados",
                                       "Error",
                                       MessageBoxButtons.OK);
             }
-<<<<<<< HEAD
             bool testClientesOk = Cliente.CrearClientesPrueba();
             if (!testClientesOk)
             {
-                MessageBox.Show("Problema al cargar cliente mock",
+                MessageBox.Show("Problema al cargar clientes",
                                       "Error",
                                       MessageBoxButtons.OK);
             }
-=======
->>>>>>> parent of 6339477 (Commit final, falta ventas, faltan validaciones)
+            bool testProductoOk = Producto.CrearProductoPrueba();
+            if (!testProductoOk)
+            {
+                MessageBox.Show("Problema al cargar los producto",
+                                      "Error",
+                                      MessageBoxButtons.OK);
+            }
+            bool testVentasOk = Venta.CrearVentaPrueba();
+            if (!testVentasOk)
+            {
+                MessageBox.Show("Problema al cargar ventas",
+                                      "Error",
+                                      MessageBoxButtons.OK);
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

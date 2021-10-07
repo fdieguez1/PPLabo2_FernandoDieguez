@@ -12,29 +12,27 @@ namespace PetShopForms.Vistas.Menu
 {
     public partial class MenuEmpleado : Form
     {
-        public MenuEmpleado()
+        Inicio inicioForm;
+        Inicio InicioForm
+        {
+            get { return this.inicioForm; }
+            set { this.inicioForm = value; }
+        }
+        public MenuEmpleado(Inicio inicioForm)
         {
             InitializeComponent();
+            this.InicioForm = inicioForm;
         }
-
-        private void MenuEmpleado_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            InicioForm.ChangeBody(new Clientes.Listado());
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-
+            InicioForm.ChangeBody(new Ventas.Listado());
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
